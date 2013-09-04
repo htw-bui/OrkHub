@@ -1,0 +1,51 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{48FE085E-4C37-4860-B595-030D876A9DA4}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\NuGet.Config = .nuget\NuGet.Config
+		.nuget\NuGet.exe = .nuget\NuGet.exe
+		.nuget\NuGet.targets = .nuget\NuGet.targets
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenResKit.DomainModel", "OpenResKit.DomainModel\OpenResKit.DomainModel.csproj", "{5852ED45-B1AD-4C6A-8D2D-7E23B42E8740}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenResKit.Runtime", "OpenResKit.Runtime\OpenResKit.Runtime.csproj", "{A4F88CB1-ACE7-4E47-9595-000BD1E57AAB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenResKitHub", "OpenResKitHub\OpenResKitHub.csproj", "{BC039E9B-D50E-434D-A507-344A5504A190}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenResKit.ODataHost", "OpenResKit.ODataHost\OpenResKit.ODataHost.csproj", "{6E20EECD-73A8-4B07-8ACD-15668AEA9BFC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenResKitHubConsole", "OpenResKitHubConsole\OpenResKitHubConsole.csproj", "{CF375FC4-B24A-459A-A1A5-F4A2C145EAF6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5852ED45-B1AD-4C6A-8D2D-7E23B42E8740}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5852ED45-B1AD-4C6A-8D2D-7E23B42E8740}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5852ED45-B1AD-4C6A-8D2D-7E23B42E8740}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5852ED45-B1AD-4C6A-8D2D-7E23B42E8740}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A4F88CB1-ACE7-4E47-9595-000BD1E57AAB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A4F88CB1-ACE7-4E47-9595-000BD1E57AAB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A4F88CB1-ACE7-4E47-9595-000BD1E57AAB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A4F88CB1-ACE7-4E47-9595-000BD1E57AAB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BC039E9B-D50E-434D-A507-344A5504A190}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BC039E9B-D50E-434D-A507-344A5504A190}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BC039E9B-D50E-434D-A507-344A5504A190}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BC039E9B-D50E-434D-A507-344A5504A190}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6E20EECD-73A8-4B07-8ACD-15668AEA9BFC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6E20EECD-73A8-4B07-8ACD-15668AEA9BFC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6E20EECD-73A8-4B07-8ACD-15668AEA9BFC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6E20EECD-73A8-4B07-8ACD-15668AEA9BFC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CF375FC4-B24A-459A-A1A5-F4A2C145EAF6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CF375FC4-B24A-459A-A1A5-F4A2C145EAF6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CF375FC4-B24A-459A-A1A5-F4A2C145EAF6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CF375FC4-B24A-459A-A1A5-F4A2C145EAF6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
