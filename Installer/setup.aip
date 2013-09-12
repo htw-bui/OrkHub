@@ -304,8 +304,10 @@
     <ATTRIBUTE name="PrereqsOrder" value="E9BFB0D602DD498F96473C9BBCDDEC89 E74D394442598C7E68505BEEF299 SQLServer2012Expr"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.PreReqSearchComponent">
-    <ROW SearchKey="E74D394442598C7E68505BEEF299_SQL_2012_SEARCH_1" Prereq="E74D394442598C7E68505BEEF299" SearchType="2" SearchString="HKLM\SOFTWARE\Microsoft\Microsoft SQL Server\110\Bootstrap\Setup\PatchLevel" VerMin="10.0" Order="1" Property="AI_SQL_2012_ORIGINAL_PREREQSEARCH_1_PROP"/>
+    <ROW SearchKey="E74D394442598C7E68505BEEF299_SQL_2012_SEARCH_1" Prereq="E74D394442598C7E68505BEEF299" SearchType="2" SearchString="HKLM\SOFTWARE\Microsoft\Microsoft SQL Server\110\Bootstrap\Setup\PatchLevel" VerMin="11.0" Order="1" Property="AI_SQL_2012_ORIGINAL_PREREQSEARCH_1_PROP"/>
     <ROW SearchKey="E9BFB0D602DD498F96473C9BBCDDEC89_NET_45_SEARCH" Prereq="E9BFB0D602DD498F96473C9BBCDDEC89" SearchType="2" SearchString="HKLM\SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full\Version" VerMin="4.5" Order="1" Property="AI_NET_45_ORIGINAL_PREREQSEARCH_PROP"/>
-    <ROW SearchKey="PatchLevel" Prereq="SQLServer2012Expr" SearchType="2" SearchString="HKLM\SOFTWARE\Microsoft\Microsoft SQL Server\110\Bootstrap\Setup\PatchLevel" VerMin="10.0" Order="1" Property="AI_SQL_2012_ORIGINAL_PREREQSEARCH_1_PROP_1"/>
+    <ROW SearchKey="PatchLevel" Prereq="SQLServer2012Expr" SearchType="2" SearchString="HKLM\SOFTWARE\Microsoft\Microsoft SQL Server\100\Bootstrap\Setup\PatchLevel" VerMin="10.0" Order="1" Property="AI_SQL_2012_ORIGINAL_PREREQSEARCH_1_PROP_1"/>
+    <ROW SearchKey="PatchLevel_1" Prereq="SQLServer2012Expr" SearchType="2" SearchString="HKLM\SOFTWARE\Microsoft\Microsoft SQL Server\110\Bootstrap\Setup\PatchLevel" VerMin="11.0" Order="2" Property="PreReqSearch"/>
+    <ROW SearchKey="PatchLevel_2" Prereq="E74D394442598C7E68505BEEF299" SearchType="2" SearchString="HKLM\SOFTWARE\Microsoft\Microsoft SQL Server\100\Bootstrap\Setup\PatchLevel" VerMin="10.0" Order="2" Property="PreReqSearch_1"/>
   </COMPONENT>
 </DOCUMENT>
