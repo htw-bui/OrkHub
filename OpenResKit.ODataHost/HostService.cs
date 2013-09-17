@@ -68,9 +68,11 @@ namespace OpenResKit.ODataHost
 
       var binding = new WebHttpBinding();
       binding.MaxReceivedMessageSize = int.MaxValue;
-
+      
       m_DataHost.AddServiceEndpoint(typeof (IRequestHandler), binding, "")
+
                 .Behaviors.Add(new EnableCrossOriginResourceSharingBehavior());
+      
       m_DataHost.Open();
     }
 
@@ -85,7 +87,7 @@ namespace OpenResKit.ODataHost
                                                    {
                                                      new Uri(baseAdress + metadata["Name"])
                                                    });
-
+  
         var http = new BasicHttpBinding();
         http.MaxReceivedMessageSize = 2147483647;
         serviceHost.AddServiceEndpoint(service.GetType(), http, "");
