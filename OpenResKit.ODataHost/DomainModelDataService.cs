@@ -45,7 +45,7 @@ namespace OpenResKit.ODataHost
       //config.SetServiceOperationAccessRule("*",
       //																		 ServiceOperationRights.All);
       config.UseVerboseErrors = true;
-      config.DataServiceBehavior.MaxProtocolVersion = DataServiceProtocolVersion.V2;
+      config.DataServiceBehavior.MaxProtocolVersion = DataServiceProtocolVersion.V3;
     }
 
     protected override DomainModelContext CreateDataSource()
