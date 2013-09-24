@@ -20,12 +20,14 @@ using System.ComponentModel.Composition;
 using System.Data.Services;
 using System.ServiceModel;
 using System.ServiceModel.Description;
+using System.ServiceModel.Security;
 
 namespace OpenResKit.ODataHost
 {
   [Export(typeof (IHostService))]
   internal class HostService : IHostService
   {
+    private readonly CustomUserNameValidator m_CustomUserNameValidator;
     private readonly DomainModelInstanceProvider m_DomainModelInstanceProvider;
     private readonly PolicyRetriever m_PolicyRetriever;
     private readonly IList<ServiceHost> m_ServiceHosts = new List<ServiceHost>();
@@ -35,11 +37,12 @@ namespace OpenResKit.ODataHost
 
     [ImportingConstructor]
     public HostService([ImportMany(typeof (IWCFService))] IEnumerable<Lazy<IWCFService, Dictionary<string, object>>> services, [Import] PolicyRetriever policyRetriever,
-      [Import] DomainModelInstanceProvider domainModelInstanceProvider)
+      [Import] DomainModelInstanceProvider domainModelInstanceProvider, [Import] CustomUserNameValidator customUserNameValidator)
     {
       m_Services = services;
       m_PolicyRetriever = policyRetriever;
       m_DomainModelInstanceProvider = domainModelInstanceProvider;
+      m_CustomUserNameValidator = customUserNameValidator;
     }
 
     public void StartServices(string baseAdress)
@@ -68,11 +71,12 @@ namespace OpenResKit.ODataHost
 
       var binding = new WebHttpBinding();
       binding.MaxReceivedMessageSize = int.MaxValue;
-      
+      binding.Security.Mode = WebHttpSecurityMode.TransportCredentialOnly;
+      binding.Security.Transport.ClientCredentialType = HttpClientCredentialType.Basic;
       m_DataHost.AddServiceEndpoint(typeof (IRequestHandler), binding, "")
-
                 .Behaviors.Add(new EnableCrossOriginResourceSharingBehavior());
-      
+      m_DataHost.Credentials.UserNameAuthentication.UserNamePasswordValidationMode = UserNamePasswordValidationMode.Custom;
+      m_DataHost.Credentials.UserNameAuthentication.CustomUserNamePasswordValidator = m_CustomUserNameValidator;
       m_DataHost.Open();
     }
 
@@ -87,10 +91,14 @@ namespace OpenResKit.ODataHost
                                                    {
                                                      new Uri(baseAdress + metadata["Name"])
                                                    });
-  
+
         var http = new BasicHttpBinding();
         http.MaxReceivedMessageSize = 2147483647;
+        http.Security.Mode = BasicHttpSecurityMode.TransportCredentialOnly;
+        http.Security.Transport.ClientCredentialType = HttpClientCredentialType.Basic;
         serviceHost.AddServiceEndpoint(service.GetType(), http, "");
+        serviceHost.Credentials.UserNameAuthentication.UserNamePasswordValidationMode = UserNamePasswordValidationMode.Custom;
+        serviceHost.Credentials.UserNameAuthentication.CustomUserNamePasswordValidator = m_CustomUserNameValidator;
 
         var stp = serviceHost.Description.Behaviors.Find<ServiceDebugBehavior>();
         stp.HttpHelpPageEnabled = false;
@@ -111,8 +119,14 @@ namespace OpenResKit.ODataHost
                                                         {
                                                           new Uri(baseAdress)
                                                         });
-      m_PolicyHost.AddServiceEndpoint(m_PolicyRetriever.GetType(), new WebHttpBinding(), "")
+      var binding = new WebHttpBinding();
+      //binding.Security.Mode = WebHttpSecurityMode.TransportCredentialOnly;
+      //binding.Security.Transport.ClientCredentialType = HttpClientCredentialType.None;
+
+      m_PolicyHost.AddServiceEndpoint(m_PolicyRetriever.GetType(), binding, "")
                   .Behaviors.Add(new WebHttpBehavior());
+      //m_PolicyHost.Credentials.UserNameAuthentication.UserNamePasswordValidationMode = UserNamePasswordValidationMode.Custom;
+      //m_PolicyHost.Credentials.UserNameAuthentication.CustomUserNamePasswordValidator = m_CustomUserNameValidator;
       var smb = new ServiceMetadataBehavior
                 {
                   HttpGetEnabled = true

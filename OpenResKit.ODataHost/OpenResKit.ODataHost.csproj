@@ -61,6 +61,7 @@
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.Entity" />
+    <Reference Include="System.IdentityModel" />
     <Reference Include="System.ServiceModel" />
     <Reference Include="System.ServiceModel.Web" />
     <Reference Include="System.Spatial, Version=5.6.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
@@ -70,6 +71,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CustomHeaderMessageInspector.cs" />
+    <Compile Include="CustomUserNameValidator.cs" />
     <Compile Include="DeleteEvaluationService.cs" />
     <Compile Include="DomainModelDataServiceFactory.cs" />
     <Compile Include="DomainModelDataService.cs" />

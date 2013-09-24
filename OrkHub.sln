@@ -18,6 +18,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenResKit.ODataHost", "Ope
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenResKitHubConsole", "OpenResKitHubConsole\OpenResKitHubConsole.csproj", "{CF375FC4-B24A-459A-A1A5-F4A2C145EAF6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenResKit.Organisation", "OpenResKit.Organisation\OpenResKit.Organisation.csproj", "{B782D688-DAE4-484A-A2D8-CC556A39F4B8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenResKit.Waste", "OpenResKit.Waste\OpenResKit.Waste.csproj", "{0161E5F3-6119-4184-A275-F4672F236463}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -44,6 +48,14 @@ Global
 		{CF375FC4-B24A-459A-A1A5-F4A2C145EAF6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CF375FC4-B24A-459A-A1A5-F4A2C145EAF6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CF375FC4-B24A-459A-A1A5-F4A2C145EAF6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B782D688-DAE4-484A-A2D8-CC556A39F4B8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B782D688-DAE4-484A-A2D8-CC556A39F4B8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B782D688-DAE4-484A-A2D8-CC556A39F4B8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B782D688-DAE4-484A-A2D8-CC556A39F4B8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0161E5F3-6119-4184-A275-F4672F236463}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0161E5F3-6119-4184-A275-F4672F236463}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0161E5F3-6119-4184-A275-F4672F236463}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0161E5F3-6119-4184-A275-F4672F236463}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
