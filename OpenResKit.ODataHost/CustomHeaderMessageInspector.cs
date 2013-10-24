@@ -23,11 +23,11 @@ namespace OpenResKit.ODataHost
 {
   public class CustomHeaderMessageInspector : IDispatchMessageInspector
   {
-    private Dictionary<string, string> requiredHeaders;
+    private readonly Dictionary<string, string> m_RequiredHeaders;
 
     public CustomHeaderMessageInspector(Dictionary<string, string> headers)
     {
-      requiredHeaders = headers ?? new Dictionary<string, string>();
+      m_RequiredHeaders = headers ?? new Dictionary<string, string>();
     }
 
     public object AfterReceiveRequest(ref Message request, IClientChannel channel, InstanceContext instanceContext)
@@ -38,7 +38,7 @@ namespace OpenResKit.ODataHost
     public void BeforeSendReply(ref Message reply, object correlationState)
     {
       var httpHeader = reply.Properties["httpResponse"] as HttpResponseMessageProperty;
-      foreach (var item in requiredHeaders)
+      foreach (var item in m_RequiredHeaders)
       {
         httpHeader.Headers.Add(item.Key, item.Value);
       }

@@ -1,20 +1,36 @@
 ﻿using System.ComponentModel.Composition;
 using System.IdentityModel.Selectors;
-using System.ServiceModel;
+using System.Linq;
+using System.ServiceModel.Security;
 
 namespace OpenResKit.ODataHost
 {
   [Export]
-  internal class CustomUserNameValidator: UserNamePasswordValidator
+  internal class CustomUserNameValidator : UserNamePasswordValidator
   {
-    public override void Validate(string userName, string password)
+    private readonly CredentialsDatabaseAccessor m_CredentialsDatabaseAccessor;
+
+    [ImportingConstructor]
+    public CustomUserNameValidator([Import] CredentialsDatabaseAccessor credentialsDatabaseAccessor)
     {
-      if ("root" == userName && "ork123" == password)
+      m_CredentialsDatabaseAccessor = credentialsDatabaseAccessor;
+    }
+
+    public override void Validate(string user, string password)
+    {
+      if (("root" == user && "ork123" == password))
       {
         return;
       }
 
-      throw new FaultException("Unknown Username or Incorrect Password");
+      var existingUser = m_CredentialsDatabaseAccessor.Credentials.SingleOrDefault(c => c.User == user);
+      if (existingUser != null &&
+          PasswordHash.ValidatePassword(password, existingUser.Password))
+      {
+        return;
+      }
+
+      throw new SecurityAccessDeniedException("Unknown Username or Incorrect Password");
     }
   }
 }

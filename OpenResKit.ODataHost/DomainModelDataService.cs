@@ -48,6 +48,11 @@ namespace OpenResKit.ODataHost
       config.DataServiceBehavior.MaxProtocolVersion = DataServiceProtocolVersion.V3;
     }
 
+    protected override void OnStartProcessingRequest(ProcessRequestArgs args)
+    {
+      
+    }
+
     protected override DomainModelContext CreateDataSource()
     {
       return m_CreateContext();

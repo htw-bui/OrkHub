@@ -45,7 +45,6 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ContextConfiguration.cs" />
     <Compile Include="DatabaseInitializer.cs" />
     <Compile Include="DatabaseMigratorFactory.cs" />
     <Compile Include="DomainModelContext.cs" />
