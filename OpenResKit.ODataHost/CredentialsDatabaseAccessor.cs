@@ -35,25 +35,53 @@ namespace OpenResKit.ODataHost
     }
 
     [OperationContract]
-    public void CreateOrUpdate(string user, string password)
+    public void Create(string user, string password)
     {
-      var existingUser = Credentials.SingleOrDefault(c => c.User == user);
+      if (Credentials.Any(c => c.User == user))
+      {
+        throw new InvalidOperationException("The given user already exists.");
+      }
       var passwordHash = PasswordHash.CreateHash(password);
-      if (existingUser != null)
-      {
-        existingUser.Password = passwordHash;
-      }
-      else
-      {
-        m_Credentials.Add(new Credential()
-                          {
-                            Password = passwordHash,
-                            User = user
-                          });
-      }
+      m_Credentials.Add(new Credential()
+                        {
+                          Password = passwordHash,
+                          User = user
+                        });
       SaveCredentials();
     }
 
+    [OperationContract]
+    public void UpdateUser(string oldUser, string newUser)
+    {
+      var existingUser = Credentials.SingleOrDefault(c => c.User == oldUser);
+      if (existingUser == null)
+      {
+        throw new InvalidOperationException("The given user does not exist.");
+      }
+      m_Credentials.Remove(existingUser);
+      m_Credentials.Add(new Credential()
+                        {
+                          Password = existingUser.Password,
+                          User = newUser
+                        });
+
+      SaveCredentials();
+    }
+
+    [OperationContract]
+    public void UpdatePassword(string user, string password)
+    {
+      var existingUser = Credentials.SingleOrDefault(c => c.User == user);
+      var passwordHash = PasswordHash.CreateHash(password);
+      if (existingUser == null)
+      {
+        throw new InvalidOperationException("The given user does not exist.");
+      }
+
+      existingUser.Password = passwordHash;
+      SaveCredentials();
+    }
+    
     private void SaveCredentials()
     {
       m_Engine.WriteFile(m_AuthFile, Credentials);
