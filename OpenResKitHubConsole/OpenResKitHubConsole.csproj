@@ -46,11 +46,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config">
-      <SubType>Designer</SubType>
-    </None>
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="..\OpenResKitHub\OpenResKitHub.csproj">
       <Project>{BC039E9B-D50E-434D-A507-344A5504A190}</Project>
       <Name>OpenResKitHub</Name>
