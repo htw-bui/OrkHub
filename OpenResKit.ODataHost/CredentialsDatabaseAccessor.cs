@@ -97,7 +97,7 @@ namespace OpenResKit.ODataHost
       }
       else
       {
-        throw new KeyNotFoundException("User to delete not found!");
+        throw new InvalidOperationException("The given user does not exist.");
       }
       SaveCredentials();
     }
