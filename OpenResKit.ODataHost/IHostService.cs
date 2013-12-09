@@ -18,7 +18,7 @@ namespace OpenResKit.ODataHost
 {
   public interface IHostService
   {
-    void StartServices(string address);
+    void StartServices();
     void StopServices();
   }
 }

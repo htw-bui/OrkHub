@@ -21,6 +21,7 @@ using System.Data.Services;
 using System.ServiceModel;
 using System.ServiceModel.Description;
 using System.ServiceModel.Security;
+using OpenResKit.ODataHost.Properties;
 
 namespace OpenResKit.ODataHost
 {
@@ -34,6 +35,7 @@ namespace OpenResKit.ODataHost
     private readonly IEnumerable<Lazy<IWCFService, Dictionary<string, object>>> m_Services;
     private DataServiceHost m_DataHost;
     private ServiceHost m_PolicyHost;
+    private readonly string m_BaseAdress = string.Format("http://{0}:{1}", Settings.Default.Url, Settings.Default.Port);
 
     [ImportingConstructor]
     public HostService([ImportMany(typeof (IWCFService))] IEnumerable<Lazy<IWCFService, Dictionary<string, object>>> services, [Import] PolicyRetriever policyRetriever,
@@ -45,11 +47,11 @@ namespace OpenResKit.ODataHost
       m_CustomUserNameValidator = customUserNameValidator;
     }
 
-    public void StartServices(string baseAdress)
+    public void StartServices()
     {
-      StartDataHost(baseAdress);
-      StartWCFHosts(baseAdress);
-      StartPolicyHost(baseAdress);
+      StartDataHost(m_BaseAdress);
+      StartWCFHosts(m_BaseAdress);
+      StartPolicyHost(m_BaseAdress);
     }
 
     public void StopServices()

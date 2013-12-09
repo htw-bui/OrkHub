@@ -13,6 +13,9 @@
     <ROW Property="ARPURLINFOABOUT" Value="http://openreskit.htw-berlin.de/downloads/software/openreskithub"/>
     <ROW Property="ARPURLUPDATEINFO" Value="http://openreskit.htw-berlin.de/downloads/software/openreskithub/OrkHubSetup.exe"/>
     <ROW Property="GET_PORT" Value="7000" Options="1"/>
+    <ROW Property="GET_ROOTPW" Value="ork123" Type="4"/>
+    <ROW Property="GET_ROOTUSER" Value="root" Type="4"/>
+    <ROW Property="GET_URL" Value="localhost" Type="4"/>
     <ROW Property="GET_USER_NAME" Value="Ihr Name" Options="1"/>
     <ROW Property="GET_USER_PW" Value="123" Options="1"/>
     <ROW Property="Manufacturer" Value="HTW Berlin"/>
@@ -59,8 +62,8 @@
   <COMPONENT cid="caphyon.advinst.msicomp.MsiFilesComponent">
     <ROW File="EntityFramework.dll" Component_="EntityFramework.dll" FileName="Entity~1.dll|EntityFramework.dll" Attributes="0" SourcePath="bin\EntityFramework.dll" SelfReg="false" NextFile="Microsoft.Data.Edm.dll"/>
     <ROW File="EntityFramework.xml" Component_="EntityFramework.xml" FileName="Entity~1.xml|EntityFramework.xml" Attributes="0" SourcePath="bin\EntityFramework.xml" SelfReg="false" NextFile="Microsoft.Data.Edm.xml"/>
-    <ROW File="FileHelpers.dll" Component_="FileHelpers.dll" FileName="FileHe~1.dll|FileHelpers.dll" Attributes="0" SourcePath="bin\FileHelpers.dll" SelfReg="false" NextFile="OpenResKitHub.exe.config"/>
-    <ROW File="FileHelpers.xml" Component_="EntityFramework.xml" FileName="FileHe~1.xml|FileHelpers.xml" Attributes="0" SourcePath="bin\FileHelpers.xml" SelfReg="false"/>
+    <ROW File="FileHelpers.dll" Component_="FileHelpers.dll" FileName="FileHe~1.dll|FileHelpers.dll" Attributes="0" SourcePath="bin\FileHelpers.dll" SelfReg="false" NextFile="FileHelpers.xml"/>
+    <ROW File="FileHelpers.xml" Component_="EntityFramework.xml" FileName="FileHe~1.xml|FileHelpers.xml" Attributes="0" SourcePath="bin\FileHelpers.xml" SelfReg="false" NextFile="OpenResKitHub.exe.config"/>
     <ROW File="Microsoft.Data.Edm.dll" Component_="Microsoft.Data.Edm.dll" FileName="Micros~1.dll|Microsoft.Data.Edm.dll" Attributes="0" SourcePath="bin\Microsoft.Data.Edm.dll" SelfReg="false" NextFile="Microsoft.Data.OData.dll"/>
     <ROW File="Microsoft.Data.Edm.xml" Component_="EntityFramework.xml" FileName="Micros~1.xml|Microsoft.Data.Edm.xml" Attributes="0" SourcePath="bin\Microsoft.Data.Edm.xml" SelfReg="false" NextFile="Microsoft.Data.OData.xml"/>
     <ROW File="Microsoft.Data.OData.dll" Component_="Microsoft.Data.OData.dll" FileName="Micros~2.dll|Microsoft.Data.OData.dll" Attributes="0" SourcePath="bin\Microsoft.Data.OData.dll" SelfReg="false" NextFile="Microsoft.Data.Services.Client.dll"/>
@@ -73,7 +76,7 @@
     <ROW File="OpenResKit.ODataHost.dll" Component_="OpenResKit.ODataHost.dll" FileName="OpenRe~2.dll|OpenResKit.ODataHost.dll" Attributes="0" SourcePath="bin\OpenResKit.ODataHost.dll" SelfReg="false" NextFile="OpenResKit.Runtime.dll"/>
     <ROW File="OpenResKit.Runtime.dll" Component_="OpenResKit.Runtime.dll" FileName="OpenRe~3.dll|OpenResKit.Runtime.dll" Attributes="0" SourcePath="bin\OpenResKit.Runtime.dll" SelfReg="false" NextFile="OpenResKitHub.exe"/>
     <ROW File="OpenResKitHub.exe" Component_="OpenResKitHub.exe" FileName="OpenRe~1.exe|OpenResKitHub.exe" Attributes="0" SourcePath="bin\OpenResKitHub.exe" SelfReg="false" NextFile="OpenResKitHubConsole.exe" DigSign="true"/>
-    <ROW File="OpenResKitHub.exe.config" Component_="EntityFramework.xml" FileName="OpenRe~1.con|OpenResKitHub.exe.config" Attributes="0" SourcePath="bin\OpenResKitHub.exe.config" SelfReg="false" NextFile="FileHelpers.xml"/>
+    <ROW File="OpenResKitHub.exe.config" Component_="EntityFramework.xml" FileName="OpenRe~1.con|OpenResKitHub.exe.config" Attributes="0" SourcePath="bin\OpenResKitHub.exe.config" SelfReg="false"/>
     <ROW File="OpenResKitHubConsole.exe" Component_="OpenResKitHubConsole.exe" FileName="OpenRe~2.exe|OpenResKitHubConsole.exe" Attributes="0" SourcePath="bin\OpenResKitHubConsole.exe" SelfReg="false" NextFile="System.Spatial.dll" DigSign="true"/>
     <ROW File="System.Spatial.dll" Component_="System.Spatial.dll" FileName="System~1.dll|System.Spatial.dll" Attributes="0" SourcePath="bin\System.Spatial.dll" SelfReg="false" NextFile="EntityFramework.xml"/>
     <ROW File="System.Spatial.xml" Component_="EntityFramework.xml" FileName="System~1.xml|System.Spatial.xml" Attributes="0" SourcePath="bin\System.Spatial.xml" SelfReg="false" NextFile="FileHelpers.dll"/>
@@ -113,6 +116,12 @@
     <ROW Action="AI_FwRemove" Description="Konfiguriere Windows Firewall" Template="Konfiguriere Windows Firewall Regel: &quot;[1]&quot;" DescriptionLocId="ActionText.Description.AI_FwRemove" TemplateLocId="ActionText.Template.AI_FwRemove"/>
     <ROW Action="AI_FwRollback" Description="Zurücksetzen der Windows Firewall Konfiguration" Template="Zurücksetzen der Windows Firewall Konfiguration" DescriptionLocId="ActionText.Description.AI_FwRollback" TemplateLocId="ActionText.Template.AI_FwRollback"/>
     <ROW Action="AI_FwUninstall" Description="Erzeuge Konfigurationsaktionen für Windows Firewall" DescriptionLocId="ActionText.Description.AI_FwUninstall"/>
+    <ROW Action="AI_XmlCommit" Description="XML Dateikonfigurationen vornehmen." Template="XML Dateikonfigurationen vornehmen." DescriptionLocId="ActionText.Description.AI_XmlCommit" TemplateLocId="ActionText.Template.AI_XmlCommit"/>
+    <ROW Action="AI_XmlConfig" Description="Führe XML Dateikonfiguration aus" Template="Konfiguriere XML Datei: &quot;[1]&quot;" DescriptionLocId="ActionText.Description.AI_XmlConfig" TemplateLocId="ActionText.Template.AI_XmlConfig"/>
+    <ROW Action="AI_XmlInstall" Description="Erzeuge Konfigurationsaktionen für XML Dateien" DescriptionLocId="ActionText.Description.AI_XmlInstall"/>
+    <ROW Action="AI_XmlRemove" Description="Führe XML Dateikonfiguration aus" Template="Konfiguriere XML Datei: &quot;[1]&quot;" DescriptionLocId="ActionText.Description.AI_XmlRemove" TemplateLocId="ActionText.Template.AI_XmlRemove"/>
+    <ROW Action="AI_XmlRollback" Description="Setze XML Dateikonfiguration zurück" Template="Setze XML Dateikonfiguration zurück" DescriptionLocId="ActionText.Description.AI_XmlRollback" TemplateLocId="ActionText.Template.AI_XmlRollback"/>
+    <ROW Action="AI_XmlUninstall" Description="Erzeuge Konfigurationsaktionen für XML Dateien" DescriptionLocId="ActionText.Description.AI_XmlUninstall"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiAppSearchComponent">
     <ROW Property="AI_SETUPEXEPATH" Signature_="AI_EXE_PATH_CU" Builds="DefaultBuild"/>
@@ -124,6 +133,7 @@
     <ROW Name="Prereq.dll" SourcePath="&lt;AI_CUSTACTS&gt;Prereq.dll"/>
     <ROW Name="aicustact.dll" SourcePath="&lt;AI_CUSTACTS&gt;aicustact.dll"/>
     <ROW Name="lzmaextractor.dll" SourcePath="&lt;AI_CUSTACTS&gt;lzmaextractor.dll"/>
+    <ROW Name="xmlCfg.dll" SourcePath="&lt;AI_CUSTACTS&gt;xmlCfg.dll"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiControlComponent">
     <ROW Dialog_="AdminInstallPointDlg" Control="PreparingLabel" Type="Text" X="35" Y="114" Width="111" Height="18" Attributes="196611" Text="Installation wird vorbereitet" TextStyle="Labels" Order="1100" TextLocId="Graphite.Control.Text.Dlg#PreparingLabel" MsiKey="AdminInstallPointDlg#PreparingLabel"/>
@@ -160,14 +170,20 @@
     <ROW Dialog_="UserPassDlg" Control="PreparingLabel" Type="Text" X="35" Y="114" Width="111" Height="18" Attributes="196611" Text="Installation wird vorbereitet" TextStyle="Labels" Order="800"/>
     <ROW Dialog_="UserPassDlg" Control="InstallingLabel" Type="Text" X="35" Y="138" Width="104" Height="11" Attributes="196611" Text="Installiere" TextStyle="Labels" Order="900"/>
     <ROW Dialog_="UserPassDlg" Control="FinalizingLabel" Type="Text" X="35" Y="162" Width="104" Height="26" Attributes="196611" Text="Installation wird abgeschlossen" TextStyle="Labels" Order="1000"/>
-    <ROW Dialog_="UserPassDlg" Control="Name_Text" Type="Edit" X="234" Y="109" Width="257" Height="18" Attributes="3" Property="GET_USER_NAME" Text="{260}" Order="1100"/>
-    <ROW Dialog_="UserPassDlg" Control="Pass_Text" Type="Edit" X="234" Y="163" Width="257" Height="18" Attributes="2097155" Property="GET_USER_PW" Text="{260}" Order="1200"/>
-    <ROW Dialog_="UserPassDlg" Control="Name_Label" Type="Text" X="177" Y="109" Width="53" Height="11" Attributes="65539" Property="TEXT_1_PROP" Text="Benutzername" Order="1300"/>
-    <ROW Dialog_="UserPassDlg" Control="Pass_Label" Type="Text" X="193" Y="163" Width="38" Height="11" Attributes="65539" Property="TEXT_2_PROP" Text="Passwort" Order="1400"/>
-    <ROW Dialog_="UserPassDlg" Control="Text_1" Type="Text" X="177" Y="64" Width="314" Height="21" Attributes="65539" Property="TEXT_1_PROP_1" Text="Geben Sie das Benutzerkonto an, der Zugriff auf den MS SQL Server hat." TextStyle="Labels" Order="1500"/>
-    <ROW Dialog_="UserPassDlg" Control="Edit_1" Type="Edit" X="235" Y="291" Width="257" Height="18" Attributes="3" Property="GET_PORT" Text="{260}" Order="1600"/>
-    <ROW Dialog_="UserPassDlg" Control="Text_2" Type="Text" X="178" Y="291" Width="53" Height="11" Attributes="65539" Property="TEXT_1_PROP_2" Text="Portnummer" Order="1700"/>
-    <ROW Dialog_="UserPassDlg" Control="Text_3" Type="Text" X="178" Y="246" Width="314" Height="21" Attributes="65539" Property="TEXT_1_PROP_1_1" Text="Geben Sie den gewünschten Serverport für den OpenResKit Hub an." TextStyle="Labels" Order="1800"/>
+    <ROW Dialog_="UserPassDlg" Control="Name_Text" Type="Edit" X="235" Y="78" Width="257" Height="18" Attributes="3" Property="GET_USER_NAME" Text="{260}" Order="1100"/>
+    <ROW Dialog_="UserPassDlg" Control="Pass_Text" Type="Edit" X="235" Y="101" Width="257" Height="18" Attributes="2097155" Property="GET_USER_PW" Text="{260}" Order="1200"/>
+    <ROW Dialog_="UserPassDlg" Control="Name_Label" Type="Text" X="173" Y="77" Width="53" Height="11" Attributes="65603" Property="TEXT_1_PROP" Text="Benutzername" Order="1300"/>
+    <ROW Dialog_="UserPassDlg" Control="Pass_Label" Type="Text" X="188" Y="101" Width="38" Height="11" Attributes="65603" Property="TEXT_2_PROP" Text="Passwort" Order="1400"/>
+    <ROW Dialog_="UserPassDlg" Control="Text_1" Type="Text" X="178" Y="43" Width="314" Height="26" Attributes="65539" Property="TEXT_1_PROP_1" Text="Geben Sie das Windows-Benutzerkonto an, der Zugriff auf den MS SQL Server hat." TextStyle="Labels" Order="1500"/>
+    <ROW Dialog_="UserPassDlg" Control="Edit_1" Type="Edit" X="235" Y="170" Width="257" Height="18" Attributes="3" Property="GET_PORT" Text="{260}" Order="1600"/>
+    <ROW Dialog_="UserPassDlg" Control="Text_2" Type="Text" X="173" Y="170" Width="53" Height="11" Attributes="65603" Property="TEXT_1_PROP_2" Text="Port" Order="1700"/>
+    <ROW Dialog_="UserPassDlg" Control="Text_3" Type="Text" X="178" Y="132" Width="314" Height="30" Attributes="65539" Property="TEXT_1_PROP_1_1" Text="Geben Sie die gewünschten Serverinformationen für den OpenResKit Hub an." TextStyle="Labels" Order="1800"/>
+    <ROW Dialog_="UserPassDlg" Control="Edit_2" Type="Edit" X="235" Y="194" Width="257" Height="18" Attributes="3" Property="GET_URL" Text="{260}" Order="1900"/>
+    <ROW Dialog_="UserPassDlg" Control="Text_4" Type="Text" X="173" Y="194" Width="53" Height="11" Attributes="65603" Property="TEXT_1_PROP_2_1" Text="Addresse" Order="2000"/>
+    <ROW Dialog_="UserPassDlg" Control="Edit_3" Type="Edit" X="235" Y="217" Width="257" Height="18" Attributes="3" Property="GET_ROOTUSER" Text="{260}" Order="2100"/>
+    <ROW Dialog_="UserPassDlg" Control="Text_5" Type="Text" X="173" Y="217" Width="53" Height="11" Attributes="65603" Property="TEXT_1_PROP_2_1_1" Text="Benutzername" Order="2200"/>
+    <ROW Dialog_="UserPassDlg" Control="Edit_4" Type="Edit" X="235" Y="242" Width="257" Height="18" Attributes="2097155" Property="GET_ROOTPW" Text="{260}" Order="2300"/>
+    <ROW Dialog_="UserPassDlg" Control="Text_6" Type="Text" X="188" Y="242" Width="38" Height="11" Attributes="65603" Property="TEXT_2_PROP_1" Text="Passwort" Order="2400"/>
     <ROW Dialog_="VerifyReadyDlg" Control="PreparingLabel" Type="Text" X="35" Y="114" Width="111" Height="18" Attributes="196611" Text="Installation wird vorbereitet" TextStyle="Labels" Order="800" TextLocId="Graphite.Control.Text.Dlg#PreparingLabel" MsiKey="VerifyReadyDlg#PreparingLabel"/>
     <ROW Dialog_="VerifyReadyDlg" Control="FinalizingLabel" Type="Text" X="35" Y="162" Width="104" Height="26" Attributes="196611" Text="Installation wird abgeschlossen" TextStyle="Labels" Order="1000" TextLocId="Graphite.Control.Text.Dlg#FinalizingLabel" MsiKey="VerifyReadyDlg#FinalizingLabel"/>
     <ROW Dialog_="VerifyRemoveDlg" Control="PreparingLabel" Type="Text" X="35" Y="114" Width="111" Height="18" Attributes="196611" Text="Installation wird vorbereitet" TextStyle="Labels" Order="800" TextLocId="Graphite.Control.Text.Dlg#PreparingLabel" MsiKey="VerifyRemoveDlg#PreparingLabel"/>
@@ -178,8 +194,12 @@
     <ROW Dialog_="WelcomeDlg" Control="FinalizingLabel" Type="Text" X="35" Y="162" Width="104" Height="26" Attributes="196611" Text="Installation wird abgeschlossen" TextStyle="Labels" Order="1100" TextLocId="Graphite.Control.Text.Dlg#FinalizingLabel" MsiKey="WelcomeDlg#FinalizingLabel"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiControlConditionComponent">
-    <ROW Dialog_="UserPassDlg" Control_="Pass_Text" Action="Enable" Condition="GET_USER_PW"/>
-    <ROW Dialog_="UserPassDlg" Control_="Pass_Text" Action="Enable" Condition="GET_USER_NAME"/>
+    <ROW Dialog_="UserPassDlg" Control_="Pass_Text" Action="Default" Condition="GET_USER_PW"/>
+    <ROW Dialog_="UserPassDlg" Control_="Name_Text" Action="Default" Condition="GET_USER_NAME"/>
+    <ROW Dialog_="UserPassDlg" Control_="Edit_1" Action="Default" Condition="GET_PORT"/>
+    <ROW Dialog_="UserPassDlg" Control_="Edit_2" Action="Default" Condition="GET_URL"/>
+    <ROW Dialog_="UserPassDlg" Control_="Edit_3" Action="Default" Condition="GET_ROOTUSER"/>
+    <ROW Dialog_="UserPassDlg" Control_="Edit_4" Action="Default" Condition="GET_ROOTPW"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiControlEventComponent">
     <ROW Dialog_="WelcomeDlg" Control_="Next" Event="NewDialog" Argument="UserPassDlg" Condition="AI_INSTALL" Ordering="1"/>
@@ -212,6 +232,8 @@
     <ROW Action="AI_AppSearchEx" Type="1" Source="Prereq.dll" Target="DoAppSearchEx"/>
     <ROW Action="AI_BACKUP_AI_SETUPEXEPATH" Type="51" Source="AI_SETUPEXEPATH_ORIGINAL" Target="[AI_SETUPEXEPATH]"/>
     <ROW Action="AI_DATA_SETTER" Type="51" Source="AI_ExtractFiles" Target="[AI_SETUPEXEPATH]"/>
+    <ROW Action="AI_DATA_SETTER_1" Type="51" Source="CustomActionData" Target="[~]"/>
+    <ROW Action="AI_DATA_SETTER_2" Type="51" Source="CustomActionData" Target="[~]"/>
     <ROW Action="AI_DOWNGRADE" Type="19" Target="4010"/>
     <ROW Action="AI_DeleteCadLzma" Type="51" Source="AI_DeleteLzma" Target="[AI_SETUPEXEPATH]"/>
     <ROW Action="AI_DeleteLzma" Type="1025" Source="lzmaextractor.dll" Target="DeleteLZMAFiles"/>
@@ -238,6 +260,12 @@
     <ROW Action="AI_ResolveLocalizedCredentials" Type="1" Source="aicustact.dll" Target="GetLocalizedCredentials"/>
     <ROW Action="AI_SHOW_LOG" Type="65" Source="aicustact.dll" Target="LaunchLogFile" WithoutSeq="true"/>
     <ROW Action="AI_STORE_LOCATION" Type="51" Source="ARPINSTALLLOCATION" Target="[APPDIR]"/>
+    <ROW Action="AI_XmlCommit" Type="11777" Source="xmlCfg.dll" Target="OnXmlCommit" WithoutSeq="true"/>
+    <ROW Action="AI_XmlConfig" Type="11265" Source="xmlCfg.dll" Target="OnXmlConfig" WithoutSeq="true"/>
+    <ROW Action="AI_XmlInstall" Type="1" Source="xmlCfg.dll" Target="OnXmlInstall" AdditionalSeq="AI_DATA_SETTER_1"/>
+    <ROW Action="AI_XmlRemove" Type="11265" Source="xmlCfg.dll" Target="OnXmlRemove" WithoutSeq="true"/>
+    <ROW Action="AI_XmlRollback" Type="11521" Source="xmlCfg.dll" Target="OnXmlRollback" WithoutSeq="true"/>
+    <ROW Action="AI_XmlUninstall" Type="1" Source="xmlCfg.dll" Target="OnXmlUninstall" AdditionalSeq="AI_DATA_SETTER_2"/>
     <ROW Action="SET_APPDIR" Type="307" Source="APPDIR" Target="[ProgramFilesFolder][Manufacturer]\[ProductName]" MultiBuildTarget="DefaultBuild:[ProgramFilesFolder][Manufacturer]\OpenResKitHub"/>
     <ROW Action="SET_SHORTCUTDIR" Type="307" Source="SHORTCUTDIR" Target="[ProgramMenuFolder][ProductName]"/>
     <ROW Action="SET_TARGETDIR_TO_APPDIR" Type="51" Source="TARGETDIR" Target="[APPDIR]"/>
@@ -271,6 +299,10 @@
     <ROW Action="AI_RemoveExternalUIStub" Condition="(REMOVE=&quot;ALL&quot;) AND ((VersionNT &gt; 500) OR((VersionNT = 500) AND (ServicePackLevel &gt;= 4)))" Sequence="1501"/>
     <ROW Action="AI_FwInstall" Condition="(VersionNT &gt;= 501) AND (REMOVE &lt;&gt; &quot;ALL&quot;)" Sequence="5849"/>
     <ROW Action="AI_FwUninstall" Condition="(VersionNT &gt;= 501) AND (REMOVE=&quot;ALL&quot;)" Sequence="1699"/>
+    <ROW Action="AI_XmlInstall" Condition="(REMOVE &lt;&gt; &quot;ALL&quot;)" Sequence="5102"/>
+    <ROW Action="AI_DATA_SETTER_1" Condition="(REMOVE &lt;&gt; &quot;ALL&quot;)" Sequence="5101"/>
+    <ROW Action="AI_XmlUninstall" Condition="(REMOVE)" Sequence="3102"/>
+    <ROW Action="AI_DATA_SETTER_2" Condition="(REMOVE)" Sequence="3101"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiInstallUISequenceComponent">
     <ROW Action="AI_RESTORE_LOCATION" Condition="APPDIR=&quot;&quot;" Sequence="749"/>
@@ -321,5 +353,39 @@
     <ROW SearchKey="PatchLevel" Prereq="SQLServer2012Expr" SearchType="2" SearchString="HKLM\SOFTWARE\Microsoft\Microsoft SQL Server\100\Bootstrap\Setup\PatchLevel" VerMin="10.0" Order="1" Property="AI_SQL_2012_ORIGINAL_PREREQSEARCH_1_PROP_1"/>
     <ROW SearchKey="PatchLevel_1" Prereq="SQLServer2012Expr" SearchType="2" SearchString="HKLM\SOFTWARE\Microsoft\Microsoft SQL Server\110\Bootstrap\Setup\PatchLevel" VerMin="11.0" Order="2" Property="PREREQSEARCH"/>
     <ROW SearchKey="PatchLevel_2" Prereq="E74D394442598C7E68505BEEF299" SearchType="2" SearchString="HKLM\SOFTWARE\Microsoft\Microsoft SQL Server\100\Bootstrap\Setup\PatchLevel" VerMin="10.0" Order="2" Property="PREREQSEARCH_1"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.XmlAttributeComponent">
+    <ROW XmlAttribute="name" XmlElement="sectionGroup" Name="name" Flags="14" Order="0" Value="applicationSettings"/>
+    <ROW XmlAttribute="name_1" XmlElement="section" Name="name" Flags="14" Order="0" Value="OpenResKit.ODataHost.Properties.Settings"/>
+    <ROW XmlAttribute="name_2" XmlElement="setting" Name="name" Flags="14" Order="0" Value="RootUser"/>
+    <ROW XmlAttribute="name_3" XmlElement="setting_1" Name="name" Flags="14" Order="0" Value="RootPassword"/>
+    <ROW XmlAttribute="name_4" XmlElement="setting_2" Name="name" Flags="14" Order="0" Value="Url"/>
+    <ROW XmlAttribute="name_5" XmlElement="setting_3" Name="name" Flags="14" Order="0" Value="Port"/>
+    <ROW XmlAttribute="requirePermission" XmlElement="section" Name="requirePermission" Flags="14" Order="2" Value="false"/>
+    <ROW XmlAttribute="serializeAs" XmlElement="setting" Name="serializeAs" Flags="14" Order="1" Value="String"/>
+    <ROW XmlAttribute="serializeAs_1" XmlElement="setting_1" Name="serializeAs" Flags="14" Order="1" Value="String"/>
+    <ROW XmlAttribute="serializeAs_2" XmlElement="setting_2" Name="serializeAs" Flags="14" Order="1" Value="String"/>
+    <ROW XmlAttribute="serializeAs_3" XmlElement="setting_3" Name="serializeAs" Flags="14" Order="1" Value="String"/>
+    <ROW XmlAttribute="type" XmlElement="sectionGroup" Name="type" Flags="14" Order="1" Value="System.Configuration.ApplicationSettingsGroup, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"/>
+    <ROW XmlAttribute="type_1" XmlElement="section" Name="type" Flags="14" Order="1" Value="System.Configuration.ClientSettingsSection, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.XmlElementComponent">
+    <ROW XmlElement="OpenResKit.ODataHost.Properties.Settings" ParentElement="applicationSettings" Name="OpenResKit.ODataHost.Properties.Settings" Order="0" Flags="14"/>
+    <ROW XmlElement="applicationSettings" ParentElement="configuration" Name="applicationSettings" Order="1" Flags="14"/>
+    <ROW XmlElement="configSections" ParentElement="configuration" Name="configSections" Order="0" Flags="14"/>
+    <ROW XmlElement="configuration" Name="configuration" Order="0" Flags="30"/>
+    <ROW XmlElement="section" ParentElement="sectionGroup" Name="section" Order="0" Flags="14"/>
+    <ROW XmlElement="sectionGroup" ParentElement="configSections" Name="sectionGroup" Order="0" Flags="14"/>
+    <ROW XmlElement="setting" ParentElement="OpenResKit.ODataHost.Properties.Settings" Name="setting" Order="0" Flags="14"/>
+    <ROW XmlElement="setting_1" ParentElement="OpenResKit.ODataHost.Properties.Settings" Name="setting" Order="1" Flags="14"/>
+    <ROW XmlElement="setting_2" ParentElement="OpenResKit.ODataHost.Properties.Settings" Name="setting" Order="2" Flags="14"/>
+    <ROW XmlElement="setting_3" ParentElement="OpenResKit.ODataHost.Properties.Settings" Name="setting" Order="3" Flags="14"/>
+    <ROW XmlElement="value" ParentElement="setting" Name="value" Order="0" Flags="14" Text="[GET_ROOTUSER]"/>
+    <ROW XmlElement="value_1" ParentElement="setting_1" Name="value" Order="0" Flags="14" Text="[GET_ROOTPW]"/>
+    <ROW XmlElement="value_2" ParentElement="setting_2" Name="value" Order="0" Flags="14" Text="[GET_URL]"/>
+    <ROW XmlElement="value_3" ParentElement="setting_3" Name="value" Order="0" Flags="14" Text="[GET_PORT]"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.XmlFileComponent">
+    <ROW XmlFile="OpenResKit.ODataHost.dll.config" FileName="OpenRe~1.con|OpenResKit.ODataHost.dll.config" DirProperty="APPDIR" Component="AI_ExePath" RootElement="configuration" Flags="89" Version="1.0" Encoding="UTF-8" IndentUnits="2"/>
   </COMPONENT>
 </DOCUMENT>

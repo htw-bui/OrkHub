@@ -17,7 +17,6 @@
 using System.ServiceProcess;
 using OpenResKit.ODataHost;
 using OpenResKit.Runtime;
-using OpenResKitHub.Properties;
 
 namespace OpenResKitHub
 {
@@ -47,7 +46,7 @@ namespace OpenResKitHub
       base.OnStart(args);
       var container = new Container();
       host = container.GetInstance<IHostService>();
-      host.StartServices(Settings.Default.ServerAddress);
+      host.StartServices();
     }
 
     protected override void OnStop()

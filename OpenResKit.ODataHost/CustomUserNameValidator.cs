@@ -2,6 +2,7 @@
 using System.IdentityModel.Selectors;
 using System.Linq;
 using System.ServiceModel.Security;
+using OpenResKit.ODataHost.Properties;
 
 namespace OpenResKit.ODataHost
 {
@@ -14,11 +15,12 @@ namespace OpenResKit.ODataHost
     public CustomUserNameValidator([Import] CredentialsDatabaseAccessor credentialsDatabaseAccessor)
     {
       m_CredentialsDatabaseAccessor = credentialsDatabaseAccessor;
+      
     }
 
     public override void Validate(string user, string password)
     {
-      if (("root" == user && "ork123" == password))
+      if ((Settings.Default.RootUser == user && Settings.Default.RootPassword == password))
       {
         return;
       }
