@@ -35,7 +35,7 @@ namespace OpenResKit.ODataHost
     private readonly IEnumerable<Lazy<IWCFService, Dictionary<string, object>>> m_Services;
     private DataServiceHost m_DataHost;
     private ServiceHost m_PolicyHost;
-    private readonly string m_BaseAdress = string.Format("http://{0}:{1}", Settings.Default.Url, Settings.Default.Port);
+    private readonly string m_BaseAdress = string.Format("http://{0}:{1}/", Settings.Default.Url, Settings.Default.Port);
 
     [ImportingConstructor]
     public HostService([ImportMany(typeof (IWCFService))] IEnumerable<Lazy<IWCFService, Dictionary<string, object>>> services, [Import] PolicyRetriever policyRetriever,
