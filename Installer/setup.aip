@@ -19,7 +19,7 @@
     <ROW Property="GET_USER_NAME" Value="Ihr Name" Options="1"/>
     <ROW Property="GET_USER_PW" Value="123" Options="1"/>
     <ROW Property="Manufacturer" Value="HTW Berlin"/>
-    <ROW Property="ProductCode" Value="1031:{1CE72056-FEA5-4D43-9B2A-1BB49AE3F15B} " Type="16"/>
+    <ROW Property="ProductCode" Value="1031:{DAF30EDD-7DBE-41DC-A1BF-E31434E4CBEF} " Type="16"/>
     <ROW Property="ProductLanguage" Value="1031"/>
     <ROW Property="ProductName" Value="OpenResKit Hub"/>
     <ROW Property="ProductVersion" Value="0.1" Type="32"/>
