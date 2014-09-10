@@ -19,10 +19,10 @@
     <ROW Property="GET_USER_NAME" Value="Ihr Name" Options="1"/>
     <ROW Property="GET_USER_PW" Value="123" Options="1"/>
     <ROW Property="Manufacturer" Value="HTW Berlin"/>
-    <ROW Property="ProductCode" Value="1031:{DAF30EDD-7DBE-41DC-A1BF-E31434E4CBEF} " Type="16"/>
+    <ROW Property="ProductCode" Value="1031:{DDCA3D77-EF22-46F2-866A-EEC942F3F41D} " Type="16"/>
     <ROW Property="ProductLanguage" Value="1031"/>
     <ROW Property="ProductName" Value="OpenResKit Hub"/>
-    <ROW Property="ProductVersion" Value="0.1" Type="32"/>
+    <ROW Property="ProductVersion" Value="1.0.0.0" Type="32" TargetFile="OpenResKitHub.exe"/>
     <ROW Property="SecureCustomProperties" Value="OLDPRODUCTS;AI_NEWERPRODUCTFOUND;AI_SETUPEXEPATH;SETUPEXEDIR"/>
     <ROW Property="UpgradeCode" Value="{9259E486-8CEE-4C83-84D7-C69C550FBA38}"/>
     <ROW Property="WindowsType9X" MultiBuildValue="DefaultBuild:Windows 9x/ME" ValueLocId="-"/>
