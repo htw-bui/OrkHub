@@ -5,6 +5,11 @@
     <ROW Property="AI_EXTERNALUIUNINSTALLERNAME" MultiBuildValue="DefaultBuild:aiui"/>
     <ROW Property="AI_FINDEXE_TITLE" Value="Wöhle das Installationspaket für [|ProductName]" ValueLocId="AI.Property.FindExeTitle"/>
     <ROW Property="AI_FrameBtns" Value="default" MultiBuildValue="DefaultBuild:lightslategray" MsiKey="AI_FrameBtns"/>
+    <ROW Property="AI_FrameColor" Value="lightslategray" MsiKey="AI_FrameColor"/>
+    <ROW Property="AI_ImagesColor" Value="powderblue" MsiKey="AI_ImagesColor"/>
+    <ROW Property="AI_LOGON_AS_SERVICE_ACCOUNTS" Value=".\[GET_USER_NAME]"/>
+    <ROW Property="AI_SecondColor" Value="default" MsiKey="AI_SecondColor"/>
+    <ROW Property="AI_ThemeStyle" Value="default" MsiKey="AI_ThemeStyle"/>
     <ROW Property="ALLUSERS" Value="1"/>
     <ROW Property="ARPCOMMENTS" Value="Diese Datenbank ist korrekt und enthält nötige Daten um [|ProductName] zu installieren." ValueLocId="*"/>
     <ROW Property="ARPNOMODIFY" MultiBuildValue="DefaultBuild:1"/>
@@ -64,7 +69,7 @@
     <ROW File="EntityFramework.dll" Component_="EntityFramework.dll" FileName="Entity~1.dll|EntityFramework.dll" Attributes="0" SourcePath="bin\EntityFramework.dll" SelfReg="false" NextFile="Microsoft.Data.Edm.dll"/>
     <ROW File="EntityFramework.xml" Component_="EntityFramework.xml" FileName="Entity~1.xml|EntityFramework.xml" Attributes="0" SourcePath="bin\EntityFramework.xml" SelfReg="false" NextFile="Microsoft.Data.Edm.xml"/>
     <ROW File="FileHelpers.dll" Component_="FileHelpers.dll" FileName="FileHe~1.dll|FileHelpers.dll" Attributes="0" SourcePath="bin\FileHelpers.dll" SelfReg="false" NextFile="FileHelpers.xml"/>
-    <ROW File="FileHelpers.xml" Component_="EntityFramework.xml" FileName="FileHe~1.xml|FileHelpers.xml" Attributes="0" SourcePath="bin\FileHelpers.xml" SelfReg="false" NextFile="OpenResKitHub.exe.config"/>
+    <ROW File="FileHelpers.xml" Component_="EntityFramework.xml" FileName="FileHe~1.xml|FileHelpers.xml" Attributes="0" SourcePath="bin\FileHelpers.xml" SelfReg="false"/>
     <ROW File="Microsoft.Data.Edm.dll" Component_="Microsoft.Data.Edm.dll" FileName="Micros~1.dll|Microsoft.Data.Edm.dll" Attributes="0" SourcePath="bin\Microsoft.Data.Edm.dll" SelfReg="false" NextFile="Microsoft.Data.OData.dll"/>
     <ROW File="Microsoft.Data.Edm.xml" Component_="EntityFramework.xml" FileName="Micros~1.xml|Microsoft.Data.Edm.xml" Attributes="0" SourcePath="bin\Microsoft.Data.Edm.xml" SelfReg="false" NextFile="Microsoft.Data.OData.xml"/>
     <ROW File="Microsoft.Data.OData.dll" Component_="Microsoft.Data.OData.dll" FileName="Micros~2.dll|Microsoft.Data.OData.dll" Attributes="0" SourcePath="bin\Microsoft.Data.OData.dll" SelfReg="false" NextFile="Microsoft.Data.Services.Client.dll"/>
@@ -77,7 +82,6 @@
     <ROW File="OpenResKit.ODataHost.dll" Component_="OpenResKit.ODataHost.dll" FileName="OpenRe~2.dll|OpenResKit.ODataHost.dll" Attributes="0" SourcePath="bin\OpenResKit.ODataHost.dll" SelfReg="false" NextFile="OpenResKit.Runtime.dll"/>
     <ROW File="OpenResKit.Runtime.dll" Component_="OpenResKit.Runtime.dll" FileName="OpenRe~3.dll|OpenResKit.Runtime.dll" Attributes="0" SourcePath="bin\OpenResKit.Runtime.dll" SelfReg="false" NextFile="OpenResKitHub.exe"/>
     <ROW File="OpenResKitHub.exe" Component_="OpenResKitHub.exe" FileName="OpenRe~1.exe|OpenResKitHub.exe" Attributes="0" SourcePath="bin\OpenResKitHub.exe" SelfReg="false" NextFile="OpenResKitHubConsole.exe" DigSign="true"/>
-    <ROW File="OpenResKitHub.exe.config" Component_="EntityFramework.xml" FileName="OpenRe~1.con|OpenResKitHub.exe.config" Attributes="0" SourcePath="bin\OpenResKitHub.exe.config" SelfReg="false"/>
     <ROW File="OpenResKitHubConsole.exe" Component_="OpenResKitHubConsole.exe" FileName="OpenRe~2.exe|OpenResKitHubConsole.exe" Attributes="0" SourcePath="bin\OpenResKitHubConsole.exe" SelfReg="false" NextFile="System.Spatial.dll" DigSign="true"/>
     <ROW File="System.Spatial.dll" Component_="System.Spatial.dll" FileName="System~1.dll|System.Spatial.dll" Attributes="0" SourcePath="bin\System.Spatial.dll" SelfReg="false" NextFile="EntityFramework.xml"/>
     <ROW File="System.Spatial.xml" Component_="EntityFramework.xml" FileName="System~1.xml|System.Spatial.xml" Attributes="0" SourcePath="bin\System.Spatial.xml" SelfReg="false" NextFile="FileHelpers.dll"/>
@@ -139,29 +143,53 @@
     <ROW Name="xmlCfg.dll" SourcePath="&lt;AI_CUSTACTS&gt;xmlCfg.dll"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiControlComponent">
+    <ROW Dialog_="AdminInstallPointDlg" Control="CollectingLabel" Type="Text" X="35" Y="90" Width="104" Height="24" Attributes="196611" Text="Informationen werden gesammelt" TextStyle="Labels" Order="1000" TextLocId="Graphite.Control.Text.Dlg#CollectingLabel" MsiKey="AdminInstallPointDlg#CollectingLabel"/>
     <ROW Dialog_="AdminInstallPointDlg" Control="PreparingLabel" Type="Text" X="35" Y="114" Width="111" Height="18" Attributes="196611" Text="Installation wird vorbereitet" TextStyle="Labels" Order="1100" TextLocId="Graphite.Control.Text.Dlg#PreparingLabel" MsiKey="AdminInstallPointDlg#PreparingLabel"/>
+    <ROW Dialog_="AdminInstallPointDlg" Control="InstallingLabel" Type="Text" X="35" Y="138" Width="104" Height="24" Attributes="196611" Text="Installiere" TextStyle="Labels" Order="1200" TextLocId="Graphite.Control.Text.Dlg#InstallingLabel" MsiKey="AdminInstallPointDlg#InstallingLabel"/>
     <ROW Dialog_="AdminInstallPointDlg" Control="FinalizingLabel" Type="Text" X="35" Y="162" Width="104" Height="26" Attributes="196611" Text="Installation wird abgeschlossen" TextStyle="Labels" Order="1300" TextLocId="Graphite.Control.Text.Dlg#FinalizingLabel" MsiKey="AdminInstallPointDlg#FinalizingLabel"/>
+    <ROW Dialog_="AdminRegistrationDlg" Control="CollectingLabel" Type="Text" X="35" Y="90" Width="104" Height="24" Attributes="196611" Text="Informationen werden gesammelt" TextStyle="Labels" Order="400" TextLocId="Graphite.Control.Text.Dlg#CollectingLabel" MsiKey="AdminRegistrationDlg#CollectingLabel"/>
     <ROW Dialog_="AdminRegistrationDlg" Control="PreparingLabel" Type="Text" X="35" Y="114" Width="111" Height="18" Attributes="196611" Text="Installation wird vorbereitet" TextStyle="Labels" Order="500" TextLocId="Graphite.Control.Text.Dlg#PreparingLabel" MsiKey="AdminRegistrationDlg#PreparingLabel"/>
+    <ROW Dialog_="AdminRegistrationDlg" Control="InstallingLabel" Type="Text" X="35" Y="138" Width="104" Height="24" Attributes="196611" Text="Installiere" TextStyle="Labels" Order="600" TextLocId="Graphite.Control.Text.Dlg#InstallingLabel" MsiKey="AdminRegistrationDlg#InstallingLabel"/>
     <ROW Dialog_="AdminRegistrationDlg" Control="FinalizingLabel" Type="Text" X="35" Y="162" Width="104" Height="26" Attributes="196611" Text="Installation wird abgeschlossen" TextStyle="Labels" Order="700" TextLocId="Graphite.Control.Text.Dlg#FinalizingLabel" MsiKey="AdminRegistrationDlg#FinalizingLabel"/>
+    <ROW Dialog_="AdminWelcomeDlg" Control="CollectingLabel" Type="Text" X="35" Y="90" Width="104" Height="24" Attributes="196611" Text="Informationen werden gesammelt" TextStyle="Labels" Order="900" TextLocId="Graphite.Control.Text.Dlg#CollectingLabel" MsiKey="AdminWelcomeDlg#CollectingLabel"/>
     <ROW Dialog_="AdminWelcomeDlg" Control="PreparingLabel" Type="Text" X="35" Y="114" Width="111" Height="18" Attributes="196611" Text="Installation wird vorbereitet" TextStyle="Labels" Order="1000" TextLocId="Graphite.Control.Text.Dlg#PreparingLabel" MsiKey="AdminWelcomeDlg#PreparingLabel"/>
+    <ROW Dialog_="AdminWelcomeDlg" Control="InstallingLabel" Type="Text" X="35" Y="138" Width="104" Height="24" Attributes="196611" Text="Installiere" TextStyle="Labels" Order="1100" TextLocId="Graphite.Control.Text.Dlg#InstallingLabel" MsiKey="AdminWelcomeDlg#InstallingLabel"/>
     <ROW Dialog_="AdminWelcomeDlg" Control="FinalizingLabel" Type="Text" X="35" Y="162" Width="104" Height="26" Attributes="196611" Text="Installation wird abgeschlossen" TextStyle="Labels" Order="1200" TextLocId="Graphite.Control.Text.Dlg#FinalizingLabel" MsiKey="AdminWelcomeDlg#FinalizingLabel"/>
+    <ROW Dialog_="CustomizeDlg" Control="CollectingLabel" Type="Text" X="35" Y="90" Width="104" Height="24" Attributes="196611" Text="Informationen werden gesammelt" TextStyle="Labels" Order="1000" TextLocId="Graphite.Control.Text.Dlg#CollectingLabel" MsiKey="CustomizeDlg#CollectingLabel"/>
     <ROW Dialog_="CustomizeDlg" Control="PreparingLabel" Type="Text" X="35" Y="114" Width="111" Height="18" Attributes="196611" Text="Installation wird vorbereitet" TextStyle="Labels" Order="1100" TextLocId="Graphite.Control.Text.Dlg#PreparingLabel" MsiKey="CustomizeDlg#PreparingLabel"/>
+    <ROW Dialog_="CustomizeDlg" Control="InstallingLabel" Type="Text" X="35" Y="138" Width="104" Height="24" Attributes="196611" Text="Installiere" TextStyle="Labels" Order="1200" TextLocId="Graphite.Control.Text.Dlg#InstallingLabel" MsiKey="CustomizeDlg#InstallingLabel"/>
     <ROW Dialog_="CustomizeDlg" Control="FinalizingLabel" Type="Text" X="35" Y="162" Width="104" Height="26" Attributes="196611" Text="Installation wird abgeschlossen" TextStyle="Labels" Order="1300" TextLocId="Graphite.Control.Text.Dlg#FinalizingLabel" MsiKey="CustomizeDlg#FinalizingLabel"/>
+    <ROW Dialog_="ExitDialog" Control="CollectingLabel" Type="Text" X="35" Y="90" Width="104" Height="24" Attributes="196611" Text="Informationen werden gesammelt" TextStyle="Labels" Order="1100" TextLocId="Graphite.Control.Text.Dlg#CollectingLabel" MsiKey="ExitDialog#CollectingLabel"/>
     <ROW Dialog_="ExitDialog" Control="PreparingLabel" Type="Text" X="35" Y="114" Width="111" Height="18" Attributes="196611" Text="Installation wird vorbereitet" TextStyle="Labels" Order="1200" TextLocId="Graphite.Control.Text.Dlg#PreparingLabel" MsiKey="ExitDialog#PreparingLabel"/>
+    <ROW Dialog_="ExitDialog" Control="InstallingLabel" Type="Text" X="35" Y="138" Width="104" Height="24" Attributes="196611" Text="Installiere" TextStyle="Labels" Order="1300" TextLocId="Graphite.Control.Text.Dlg#InstallingLabel" MsiKey="ExitDialog#InstallingLabel"/>
     <ROW Dialog_="ExitDialog" Control="FinalizingLabel" Type="Text" X="35" Y="162" Width="104" Height="26" Attributes="196611" Text="Installation wird abgeschlossen" TextStyle="Labels" Order="1400" TextLocId="Graphite.Control.Text.Dlg#FinalizingLabel" MsiKey="ExitDialog#FinalizingLabel"/>
+    <ROW Dialog_="FolderDlg" Control="CollectingLabel" Type="Text" X="35" Y="90" Width="104" Height="24" Attributes="196611" Text="Informationen werden gesammelt" TextStyle="Labels" Order="1200" TextLocId="Graphite.Control.Text.Dlg#CollectingLabel" MsiKey="FolderDlg#CollectingLabel"/>
     <ROW Dialog_="FolderDlg" Control="PreparingLabel" Type="Text" X="35" Y="114" Width="111" Height="18" Attributes="196611" Text="Installation wird vorbereitet" TextStyle="Labels" Order="1300" TextLocId="Graphite.Control.Text.Dlg#PreparingLabel" MsiKey="FolderDlg#PreparingLabel"/>
+    <ROW Dialog_="FolderDlg" Control="InstallingLabel" Type="Text" X="35" Y="138" Width="104" Height="24" Attributes="196611" Text="Installiere" TextStyle="Labels" Order="1400" TextLocId="Graphite.Control.Text.Dlg#InstallingLabel" MsiKey="FolderDlg#InstallingLabel"/>
     <ROW Dialog_="FolderDlg" Control="FinalizingLabel" Type="Text" X="35" Y="162" Width="104" Height="26" Attributes="196611" Text="Installation wird abgeschlossen" TextStyle="Labels" Order="1500" TextLocId="Graphite.Control.Text.Dlg#FinalizingLabel" MsiKey="FolderDlg#FinalizingLabel"/>
+    <ROW Dialog_="MaintenanceTypeDlg" Control="CollectingLabel" Type="Text" X="35" Y="90" Width="104" Height="24" Attributes="196611" Text="Informationen werden gesammelt" TextStyle="Labels" Order="1100" TextLocId="Graphite.Control.Text.Dlg#CollectingLabel" MsiKey="MaintenanceTypeDlg#CollectingLabel"/>
     <ROW Dialog_="MaintenanceTypeDlg" Control="PreparingLabel" Type="Text" X="35" Y="114" Width="111" Height="18" Attributes="196611" Text="Installation wird vorbereitet" TextStyle="Labels" Order="1200" TextLocId="Graphite.Control.Text.Dlg#PreparingLabel" MsiKey="MaintenanceTypeDlg#PreparingLabel"/>
+    <ROW Dialog_="MaintenanceTypeDlg" Control="InstallingLabel" Type="Text" X="35" Y="138" Width="104" Height="24" Attributes="196611" Text="Installiere" TextStyle="Labels" Order="1300" TextLocId="Graphite.Control.Text.Dlg#InstallingLabel" MsiKey="MaintenanceTypeDlg#InstallingLabel"/>
     <ROW Dialog_="MaintenanceTypeDlg" Control="FinalizingLabel" Type="Text" X="35" Y="162" Width="104" Height="26" Attributes="196611" Text="Installation wird abgeschlossen" TextStyle="Labels" Order="1400" TextLocId="Graphite.Control.Text.Dlg#FinalizingLabel" MsiKey="MaintenanceTypeDlg#FinalizingLabel"/>
+    <ROW Dialog_="MaintenanceWelcomeDlg" Control="CollectingLabel" Type="Text" X="35" Y="90" Width="104" Height="24" Attributes="196611" Text="Informationen werden gesammelt" TextStyle="Labels" Order="400" TextLocId="Graphite.Control.Text.Dlg#CollectingLabel" MsiKey="MaintenanceWelcomeDlg#CollectingLabel"/>
     <ROW Dialog_="MaintenanceWelcomeDlg" Control="PreparingLabel" Type="Text" X="35" Y="114" Width="111" Height="18" Attributes="196611" Text="Installation wird vorbereitet" TextStyle="Labels" Order="500" TextLocId="Graphite.Control.Text.Dlg#PreparingLabel" MsiKey="MaintenanceWelcomeDlg#PreparingLabel"/>
+    <ROW Dialog_="MaintenanceWelcomeDlg" Control="InstallingLabel" Type="Text" X="35" Y="138" Width="104" Height="24" Attributes="196611" Text="Installiere" TextStyle="Labels" Order="600" TextLocId="Graphite.Control.Text.Dlg#InstallingLabel" MsiKey="MaintenanceWelcomeDlg#InstallingLabel"/>
     <ROW Dialog_="MaintenanceWelcomeDlg" Control="FinalizingLabel" Type="Text" X="35" Y="162" Width="104" Height="26" Attributes="196611" Text="Installation wird abgeschlossen" TextStyle="Labels" Order="700" TextLocId="Graphite.Control.Text.Dlg#FinalizingLabel" MsiKey="MaintenanceWelcomeDlg#FinalizingLabel"/>
+    <ROW Dialog_="PatchWelcomeDlg" Control="CollectingLabel" Type="Text" X="35" Y="90" Width="104" Height="24" Attributes="196611" Text="Informationen werden gesammelt" TextStyle="Labels" Order="800" TextLocId="Graphite.Control.Text.Dlg#CollectingLabel" MsiKey="PatchWelcomeDlg#CollectingLabel"/>
     <ROW Dialog_="PatchWelcomeDlg" Control="PreparingLabel" Type="Text" X="35" Y="114" Width="111" Height="18" Attributes="196611" Text="Installation wird vorbereitet" TextStyle="Labels" Order="900" TextLocId="Graphite.Control.Text.Dlg#PreparingLabel" MsiKey="PatchWelcomeDlg#PreparingLabel"/>
+    <ROW Dialog_="PatchWelcomeDlg" Control="InstallingLabel" Type="Text" X="35" Y="138" Width="104" Height="24" Attributes="196611" Text="Installiere" TextStyle="Labels" Order="1000" TextLocId="Graphite.Control.Text.Dlg#InstallingLabel" MsiKey="PatchWelcomeDlg#InstallingLabel"/>
     <ROW Dialog_="PatchWelcomeDlg" Control="FinalizingLabel" Type="Text" X="35" Y="162" Width="104" Height="26" Attributes="196611" Text="Installation wird abgeschlossen" TextStyle="Labels" Order="1100" TextLocId="Graphite.Control.Text.Dlg#FinalizingLabel" MsiKey="PatchWelcomeDlg#FinalizingLabel"/>
+    <ROW Dialog_="PrepareDlg" Control="CollectingLabel" Type="Text" X="35" Y="90" Width="104" Height="24" Attributes="196611" Text="Informationen werden gesammelt" TextStyle="Labels" Order="1000" TextLocId="Graphite.Control.Text.Dlg#CollectingLabel" MsiKey="PrepareDlg#CollectingLabel"/>
     <ROW Dialog_="PrepareDlg" Control="PreparingLabel" Type="Text" X="35" Y="114" Width="111" Height="18" Attributes="196611" Text="Installation wird vorbereitet" TextStyle="Labels" Order="1100" TextLocId="Graphite.Control.Text.Dlg#PreparingLabel" MsiKey="PrepareDlg#PreparingLabel"/>
+    <ROW Dialog_="PrepareDlg" Control="InstallingLabel" Type="Text" X="35" Y="138" Width="104" Height="24" Attributes="196611" Text="Installiere" TextStyle="Labels" Order="1200" TextLocId="Graphite.Control.Text.Dlg#InstallingLabel" MsiKey="PrepareDlg#InstallingLabel"/>
     <ROW Dialog_="PrepareDlg" Control="FinalizingLabel" Type="Text" X="35" Y="162" Width="104" Height="26" Attributes="196611" Text="Installation wird abgeschlossen" TextStyle="Labels" Order="1300" TextLocId="Graphite.Control.Text.Dlg#FinalizingLabel" MsiKey="PrepareDlg#FinalizingLabel"/>
+    <ROW Dialog_="ProgressDlg" Control="CollectingLabel" Type="Text" X="35" Y="90" Width="104" Height="24" Attributes="196611" Text="Informationen werden gesammelt" TextStyle="Labels" Order="700" TextLocId="Graphite.Control.Text.Dlg#CollectingLabel" MsiKey="ProgressDlg#CollectingLabel"/>
     <ROW Dialog_="ProgressDlg" Control="PreparingLabel" Type="Text" X="35" Y="114" Width="111" Height="18" Attributes="196611" Text="Installation wird vorbereitet" TextStyle="Labels" Order="800" TextLocId="Graphite.Control.Text.Dlg#PreparingLabel" MsiKey="ProgressDlg#PreparingLabel"/>
+    <ROW Dialog_="ProgressDlg" Control="InstallingLabel" Type="Text" X="35" Y="138" Width="104" Height="24" Attributes="196611" Text="Installiere" TextStyle="Labels" Order="900" TextLocId="Graphite.Control.Text.Dlg#InstallingLabel" MsiKey="ProgressDlg#InstallingLabel"/>
     <ROW Dialog_="ProgressDlg" Control="FinalizingLabel" Type="Text" X="35" Y="162" Width="104" Height="26" Attributes="196611" Text="Installation wird abgeschlossen" TextStyle="Labels" Order="1000" TextLocId="Graphite.Control.Text.Dlg#FinalizingLabel" MsiKey="ProgressDlg#FinalizingLabel"/>
+    <ROW Dialog_="ResumeDlg" Control="CollectingLabel" Type="Text" X="35" Y="90" Width="104" Height="24" Attributes="196611" Text="Informationen werden gesammelt" TextStyle="Labels" Order="700" TextLocId="Graphite.Control.Text.Dlg#CollectingLabel" MsiKey="ResumeDlg#CollectingLabel"/>
     <ROW Dialog_="ResumeDlg" Control="PreparingLabel" Type="Text" X="35" Y="114" Width="111" Height="18" Attributes="196611" Text="Installation wird vorbereitet" TextStyle="Labels" Order="800" TextLocId="Graphite.Control.Text.Dlg#PreparingLabel" MsiKey="ResumeDlg#PreparingLabel"/>
+    <ROW Dialog_="ResumeDlg" Control="InstallingLabel" Type="Text" X="35" Y="138" Width="104" Height="24" Attributes="196611" Text="Installiere" TextStyle="Labels" Order="900" TextLocId="Graphite.Control.Text.Dlg#InstallingLabel" MsiKey="ResumeDlg#InstallingLabel"/>
     <ROW Dialog_="ResumeDlg" Control="FinalizingLabel" Type="Text" X="35" Y="162" Width="104" Height="26" Attributes="196611" Text="Installation wird abgeschlossen" TextStyle="Labels" Order="1000" TextLocId="Graphite.Control.Text.Dlg#FinalizingLabel" MsiKey="ResumeDlg#FinalizingLabel"/>
     <ROW Dialog_="UserPassDlg" Control="Background" Type="Bitmap" X="0" Y="0" Width="525" Height="395" Attributes="1048577" Text="[Background]" Order="100"/>
     <ROW Dialog_="UserPassDlg" Control="Next" Type="PushButton" X="368" Y="372" Width="56" Height="17" Attributes="3" Text="[ButtonText_Next]" Order="200" TextLocId="-" Options="1"/>
@@ -169,31 +197,39 @@
     <ROW Dialog_="UserPassDlg" Control="Back" Type="PushButton" X="312" Y="372" Width="56" Height="17" Attributes="3" Text="[ButtonText_Back]" Order="400" TextLocId="-" Options="1"/>
     <ROW Dialog_="UserPassDlg" Control="Title" Type="Text" X="11" Y="9" Width="420" Height="18" Attributes="196611" Text="Benutzer und Port für die Serviceinstallation spezifizieren..." TextStyle="Title" Order="500"/>
     <ROW Dialog_="UserPassDlg" Control="GlobalProgress" Type="Bitmap" X="14" Y="88" Width="14" Height="86" Attributes="1048577" Text="[Collecting]" Order="600"/>
-    <ROW Dialog_="UserPassDlg" Control="CollectingLabel" Type="Text" X="35" Y="90" Width="104" Height="11" Attributes="196611" Text="Informationen werden gesammelt" TextStyle="Labels" Order="700"/>
+    <ROW Dialog_="UserPassDlg" Control="CollectingLabel" Type="Text" X="35" Y="90" Width="104" Height="24" Attributes="196611" Text="Informationen werden gesammelt" TextStyle="Labels" Order="700"/>
     <ROW Dialog_="UserPassDlg" Control="PreparingLabel" Type="Text" X="35" Y="114" Width="111" Height="18" Attributes="196611" Text="Installation wird vorbereitet" TextStyle="Labels" Order="800"/>
-    <ROW Dialog_="UserPassDlg" Control="InstallingLabel" Type="Text" X="35" Y="138" Width="104" Height="11" Attributes="196611" Text="Installiere" TextStyle="Labels" Order="900"/>
+    <ROW Dialog_="UserPassDlg" Control="InstallingLabel" Type="Text" X="35" Y="138" Width="104" Height="24" Attributes="196611" Text="Installiere" TextStyle="Labels" Order="900"/>
     <ROW Dialog_="UserPassDlg" Control="FinalizingLabel" Type="Text" X="35" Y="162" Width="104" Height="26" Attributes="196611" Text="Installation wird abgeschlossen" TextStyle="Labels" Order="1000"/>
-    <ROW Dialog_="UserPassDlg" Control="Name_Text" Type="Edit" X="235" Y="78" Width="257" Height="18" Attributes="3" Property="GET_USER_NAME" Text="{260}" Order="1100"/>
-    <ROW Dialog_="UserPassDlg" Control="Pass_Text" Type="Edit" X="235" Y="101" Width="257" Height="18" Attributes="2097155" Property="GET_USER_PW" Text="{260}" Order="1200"/>
-    <ROW Dialog_="UserPassDlg" Control="Name_Label" Type="Text" X="173" Y="77" Width="53" Height="11" Attributes="65603" Property="TEXT_1_PROP" Text="Benutzername" Order="1300"/>
-    <ROW Dialog_="UserPassDlg" Control="Pass_Label" Type="Text" X="188" Y="101" Width="38" Height="11" Attributes="65603" Property="TEXT_2_PROP" Text="Passwort" Order="1400"/>
-    <ROW Dialog_="UserPassDlg" Control="Text_1" Type="Text" X="178" Y="43" Width="314" Height="26" Attributes="65539" Property="TEXT_1_PROP_1" Text="Geben Sie das Windows-Benutzerkonto an, der Zugriff auf den MS SQL Server hat. Dieser muss das Recht besitzen Lokale Dienste zu starten." TextStyle="Labels" Order="1500"/>
-    <ROW Dialog_="UserPassDlg" Control="Edit_1" Type="Edit" X="235" Y="170" Width="257" Height="18" Attributes="3" Property="GET_PORT" Text="{260}" Order="1600"/>
-    <ROW Dialog_="UserPassDlg" Control="Text_2" Type="Text" X="173" Y="170" Width="53" Height="11" Attributes="65603" Property="TEXT_1_PROP_2" Text="Port" Order="1700"/>
-    <ROW Dialog_="UserPassDlg" Control="Text_3" Type="Text" X="178" Y="132" Width="314" Height="30" Attributes="65539" Property="TEXT_1_PROP_1_1" Text="Geben Sie die gewünschten Serverinformationen für den OpenResKit Hub an." TextStyle="Labels" Order="1800"/>
-    <ROW Dialog_="UserPassDlg" Control="Edit_2" Type="Edit" X="235" Y="194" Width="257" Height="18" Attributes="3" Property="GET_URL" Text="{260}" Order="1900"/>
-    <ROW Dialog_="UserPassDlg" Control="Text_4" Type="Text" X="173" Y="194" Width="53" Height="11" Attributes="65603" Property="TEXT_1_PROP_2_1" Text="Addresse" Order="2000"/>
-    <ROW Dialog_="UserPassDlg" Control="Edit_3" Type="Edit" X="235" Y="217" Width="257" Height="18" Attributes="3" Property="GET_ROOTUSER" Text="{260}" Order="2100"/>
-    <ROW Dialog_="UserPassDlg" Control="Text_5" Type="Text" X="173" Y="217" Width="53" Height="11" Attributes="65603" Property="TEXT_1_PROP_2_1_1" Text="Benutzername" Order="2200"/>
-    <ROW Dialog_="UserPassDlg" Control="Edit_4" Type="Edit" X="235" Y="242" Width="257" Height="18" Attributes="2097155" Property="GET_ROOTPW" Text="{260}" Order="2300"/>
-    <ROW Dialog_="UserPassDlg" Control="Text_6" Type="Text" X="188" Y="242" Width="38" Height="11" Attributes="65603" Property="TEXT_2_PROP_1" Text="Passwort" Order="2400"/>
+    <ROW Dialog_="UserPassDlg" Control="Name_Text" Type="Edit" X="235" Y="84" Width="257" Height="18" Attributes="3" Property="GET_USER_NAME" Text="{260}" Order="1100"/>
+    <ROW Dialog_="UserPassDlg" Control="Pass_Text" Type="Edit" X="235" Y="113" Width="257" Height="18" Attributes="2097155" Property="GET_USER_PW" Text="{260}" Order="1200"/>
+    <ROW Dialog_="UserPassDlg" Control="Name_Label" Type="Text" X="173" Y="89" Width="53" Height="11" Attributes="65603" Property="TEXT_1_PROP" Text="Benutzername" Order="1300"/>
+    <ROW Dialog_="UserPassDlg" Control="Pass_Label" Type="Text" X="188" Y="113" Width="38" Height="11" Attributes="65603" Property="TEXT_2_PROP" Text="Passwort" Order="1400"/>
+    <ROW Dialog_="UserPassDlg" Control="Text_1" Type="Text" X="178" Y="39" Width="314" Height="35" Attributes="65539" Property="TEXT_1_PROP_1" Text="Geben Sie das Windows-Benutzerkonto an, das Zugriff auf den MS SQL Server hat. Dieser muss außerdem das Recht besitzen Lokale Dienste zu starten." TextStyle="Labels" Order="1500"/>
+    <ROW Dialog_="UserPassDlg" Control="Edit_1" Type="Edit" X="235" Y="198" Width="257" Height="18" Attributes="3" Property="GET_PORT" Text="{260}" Order="1600"/>
+    <ROW Dialog_="UserPassDlg" Control="Text_2" Type="Text" X="173" Y="198" Width="53" Height="11" Attributes="65603" Property="TEXT_1_PROP_2" Text="Port" Order="1700"/>
+    <ROW Dialog_="UserPassDlg" Control="Text_3" Type="Text" X="178" Y="166" Width="314" Height="30" Attributes="65539" Property="TEXT_1_PROP_1_1" Text="Geben Sie die gewünschten Serverinformationen für den OpenResKit Hub an." TextStyle="Labels" Order="1800"/>
+    <ROW Dialog_="UserPassDlg" Control="Edit_2" Type="Edit" X="235" Y="222" Width="257" Height="18" Attributes="3" Property="GET_URL" Text="{260}" Order="1900"/>
+    <ROW Dialog_="UserPassDlg" Control="Text_4" Type="Text" X="173" Y="222" Width="53" Height="11" Attributes="65603" Property="TEXT_1_PROP_2_1" Text="Addresse" Order="2000"/>
+    <ROW Dialog_="UserPassDlg" Control="Edit_3" Type="Edit" X="235" Y="245" Width="257" Height="18" Attributes="3" Property="GET_ROOTUSER" Text="{260}" Order="2100"/>
+    <ROW Dialog_="UserPassDlg" Control="Text_5" Type="Text" X="173" Y="245" Width="53" Height="11" Attributes="65603" Property="TEXT_1_PROP_2_1_1" Text="Benutzername" Order="2200"/>
+    <ROW Dialog_="UserPassDlg" Control="Edit_4" Type="Edit" X="235" Y="270" Width="257" Height="18" Attributes="2097155" Property="GET_ROOTPW" Text="{260}" Order="2300"/>
+    <ROW Dialog_="UserPassDlg" Control="Text_6" Type="Text" X="188" Y="270" Width="38" Height="11" Attributes="65603" Property="TEXT_2_PROP_1" Text="Passwort" Order="2400"/>
+    <ROW Dialog_="VerifyReadyDlg" Control="CollectingLabel" Type="Text" X="35" Y="90" Width="104" Height="24" Attributes="196611" Text="Informationen werden gesammelt" TextStyle="Labels" Order="700" TextLocId="Graphite.Control.Text.Dlg#CollectingLabel" MsiKey="VerifyReadyDlg#CollectingLabel"/>
     <ROW Dialog_="VerifyReadyDlg" Control="PreparingLabel" Type="Text" X="35" Y="114" Width="111" Height="18" Attributes="196611" Text="Installation wird vorbereitet" TextStyle="Labels" Order="800" TextLocId="Graphite.Control.Text.Dlg#PreparingLabel" MsiKey="VerifyReadyDlg#PreparingLabel"/>
+    <ROW Dialog_="VerifyReadyDlg" Control="InstallingLabel" Type="Text" X="35" Y="138" Width="104" Height="24" Attributes="196611" Text="Installiere" TextStyle="Labels" Order="900" TextLocId="Graphite.Control.Text.Dlg#InstallingLabel" MsiKey="VerifyReadyDlg#InstallingLabel"/>
     <ROW Dialog_="VerifyReadyDlg" Control="FinalizingLabel" Type="Text" X="35" Y="162" Width="104" Height="26" Attributes="196611" Text="Installation wird abgeschlossen" TextStyle="Labels" Order="1000" TextLocId="Graphite.Control.Text.Dlg#FinalizingLabel" MsiKey="VerifyReadyDlg#FinalizingLabel"/>
+    <ROW Dialog_="VerifyRemoveDlg" Control="CollectingLabel" Type="Text" X="35" Y="90" Width="104" Height="24" Attributes="196611" Text="Informationen werden gesammelt" TextStyle="Labels" Order="700" TextLocId="Graphite.Control.Text.Dlg#CollectingLabel" MsiKey="VerifyRemoveDlg#CollectingLabel"/>
     <ROW Dialog_="VerifyRemoveDlg" Control="PreparingLabel" Type="Text" X="35" Y="114" Width="111" Height="18" Attributes="196611" Text="Installation wird vorbereitet" TextStyle="Labels" Order="800" TextLocId="Graphite.Control.Text.Dlg#PreparingLabel" MsiKey="VerifyRemoveDlg#PreparingLabel"/>
+    <ROW Dialog_="VerifyRemoveDlg" Control="InstallingLabel" Type="Text" X="35" Y="138" Width="104" Height="24" Attributes="196611" Text="Installiere" TextStyle="Labels" Order="900" TextLocId="Graphite.Control.Text.Dlg#InstallingLabel" MsiKey="VerifyRemoveDlg#InstallingLabel"/>
     <ROW Dialog_="VerifyRemoveDlg" Control="FinalizingLabel" Type="Text" X="35" Y="162" Width="104" Height="26" Attributes="196611" Text="Installation wird abgeschlossen" TextStyle="Labels" Order="1000" TextLocId="Graphite.Control.Text.Dlg#FinalizingLabel" MsiKey="VerifyRemoveDlg#FinalizingLabel"/>
+    <ROW Dialog_="VerifyRepairDlg" Control="CollectingLabel" Type="Text" X="35" Y="90" Width="104" Height="24" Attributes="196611" Text="Informationen werden gesammelt" TextStyle="Labels" Order="700" TextLocId="Graphite.Control.Text.Dlg#CollectingLabel" MsiKey="VerifyRepairDlg#CollectingLabel"/>
     <ROW Dialog_="VerifyRepairDlg" Control="PreparingLabel" Type="Text" X="35" Y="114" Width="111" Height="18" Attributes="196611" Text="Installation wird vorbereitet" TextStyle="Labels" Order="800" TextLocId="Graphite.Control.Text.Dlg#PreparingLabel" MsiKey="VerifyRepairDlg#PreparingLabel"/>
+    <ROW Dialog_="VerifyRepairDlg" Control="InstallingLabel" Type="Text" X="35" Y="138" Width="104" Height="24" Attributes="196611" Text="Installiere" TextStyle="Labels" Order="900" TextLocId="Graphite.Control.Text.Dlg#InstallingLabel" MsiKey="VerifyRepairDlg#InstallingLabel"/>
     <ROW Dialog_="VerifyRepairDlg" Control="FinalizingLabel" Type="Text" X="35" Y="162" Width="104" Height="26" Attributes="196611" Text="Installation wird abgeschlossen" TextStyle="Labels" Order="1000" TextLocId="Graphite.Control.Text.Dlg#FinalizingLabel" MsiKey="VerifyRepairDlg#FinalizingLabel"/>
+    <ROW Dialog_="WelcomeDlg" Control="CollectingLabel" Type="Text" X="35" Y="90" Width="104" Height="24" Attributes="196611" Text="Informationen werden gesammelt" TextStyle="Labels" Order="800" TextLocId="Graphite.Control.Text.Dlg#CollectingLabel" MsiKey="WelcomeDlg#CollectingLabel"/>
     <ROW Dialog_="WelcomeDlg" Control="PreparingLabel" Type="Text" X="35" Y="114" Width="111" Height="18" Attributes="196611" Text="Installation wird vorbereitet" TextStyle="Labels" Order="900" TextLocId="Graphite.Control.Text.Dlg#PreparingLabel" MsiKey="WelcomeDlg#PreparingLabel"/>
+    <ROW Dialog_="WelcomeDlg" Control="InstallingLabel" Type="Text" X="35" Y="138" Width="104" Height="24" Attributes="196611" Text="Installiere" TextStyle="Labels" Order="1000" TextLocId="Graphite.Control.Text.Dlg#InstallingLabel" MsiKey="WelcomeDlg#InstallingLabel"/>
     <ROW Dialog_="WelcomeDlg" Control="FinalizingLabel" Type="Text" X="35" Y="162" Width="104" Height="26" Attributes="196611" Text="Installation wird abgeschlossen" TextStyle="Labels" Order="1100" TextLocId="Graphite.Control.Text.Dlg#FinalizingLabel" MsiKey="WelcomeDlg#FinalizingLabel"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiControlConditionComponent">
@@ -240,6 +276,7 @@
     <ROW Action="AI_DATA_SETTER_1" Type="51" Source="CustomActionData" Target="[~]"/>
     <ROW Action="AI_DATA_SETTER_2" Type="51" Source="CustomActionData" Target="[~]"/>
     <ROW Action="AI_DATA_SETTER_3" Type="51" Source="AI_RemoveAllTempFiles" Target="[AI_TEMP_FILE_ROLLBACK_INFO]"/>
+    <ROW Action="AI_DATA_SETTER_4" Type="51" Source="AI_SetLogOnAsService" Target="[AI_LOGON_AS_SERVICE_ACCOUNTS]"/>
     <ROW Action="AI_DOWNGRADE" Type="19" Target="4010"/>
     <ROW Action="AI_DeleteCadLzma" Type="51" Source="AI_DeleteLzma" Target="[AI_SETUPEXEPATH]"/>
     <ROW Action="AI_DeleteLzma" Type="1025" Source="lzmaextractor.dll" Target="DeleteLZMAFiles"/>
@@ -267,8 +304,10 @@
     <ROW Action="AI_RemoveTempFiles" Type="1" Source="tempFiles.dll" Target="RemoveTempFiles" WithoutSeq="true"/>
     <ROW Action="AI_ResolveKnownFolders" Type="1" Source="aicustact.dll" Target="AI_ResolveKnownFolders"/>
     <ROW Action="AI_ResolveLocalizedCredentials" Type="1" Source="aicustact.dll" Target="GetLocalizedCredentials"/>
+    <ROW Action="AI_ResolveLogOnAsService" Type="1" Source="aicustact.dll" Target="ResolveServiceProperties"/>
     <ROW Action="AI_SHOW_LOG" Type="65" Source="aicustact.dll" Target="LaunchLogFile" WithoutSeq="true"/>
     <ROW Action="AI_STORE_LOCATION" Type="51" Source="ARPINSTALLLOCATION" Target="[APPDIR]"/>
+    <ROW Action="AI_SetLogOnAsService" Type="3073" Source="aicustact.dll" Target="LogOnAsAService" AdditionalSeq="AI_DATA_SETTER_4"/>
     <ROW Action="AI_XmlCommit" Type="11777" Source="xmlCfg.dll" Target="OnXmlCommit" WithoutSeq="true"/>
     <ROW Action="AI_XmlConfig" Type="11265" Source="xmlCfg.dll" Target="OnXmlConfig" WithoutSeq="true"/>
     <ROW Action="AI_XmlInstall" Type="1" Source="xmlCfg.dll" Target="OnXmlInstall" AdditionalSeq="AI_DATA_SETTER_1"/>
@@ -279,7 +318,7 @@
     <ROW Action="SET_APPDIR" Type="307" Source="APPDIR" Target="[ProgramFilesFolder][Manufacturer]\[ProductName]" MultiBuildTarget="DefaultBuild:[ProgramFilesFolder][Manufacturer]\OpenResKitHub"/>
     <ROW Action="SET_SHORTCUTDIR" Type="307" Source="SHORTCUTDIR" Target="[ProgramMenuFolder][ProductName]"/>
     <ROW Action="SET_TARGETDIR_TO_APPDIR" Type="51" Source="TARGETDIR" Target="[APPDIR]"/>
-    <ROW Action="UninstallUrlAcl" Type="3074" Source="viewer.exe" Target="/HideWindow &quot;[&amp;nsremove.cmd]&quot; [GET_PORT]" Options="1"/>
+    <ROW Action="UninstallUrlAcl" Type="3074" Source="viewer.exe" Target="/RunAsAdmin /HideWindow &quot;[&amp;nsremove.cmd]&quot; [GET_PORT]" Options="1"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiDialogComponent">
     <ROW Dialog="UserPassDlg" HCentering="50" VCentering="50" Width="525" Height="395" Attributes="3" Title="[ProductName] [Setup]" Control_Default="Next" Control_Cancel="Cancel"/>
@@ -315,12 +354,15 @@
     <ROW Action="AI_XmlUninstall" Condition="(REMOVE)" Sequence="3102"/>
     <ROW Action="AI_DATA_SETTER_2" Condition="(REMOVE)" Sequence="3101"/>
     <ROW Action="InstallFinalize" Sequence="6596" SeqType="0" MsiKey="InstallFinalize"/>
-    <ROW Action="AI_ExtractTempFiles" Sequence="1001"/>
+    <ROW Action="AI_ExtractTempFiles" Sequence="1002"/>
     <ROW Action="AI_RemoveTempFiles" Sequence="6597"/>
     <ROW Action="AI_RemoveAllTempFiles" Sequence="1502"/>
     <ROW Action="AI_DATA_SETTER_3" Sequence="1501"/>
     <ROW Action="InstallUrlAcl" Condition="( NOT Installed )" Sequence="3601"/>
     <ROW Action="UninstallUrlAcl" Condition="( Installed AND ( REMOVE = &quot;ALL&quot; OR AI_INSTALL_MODE = &quot;Remove&quot; ) )" Sequence="3602"/>
+    <ROW Action="AI_SetLogOnAsService" Condition="NOT Installed" Sequence="4002"/>
+    <ROW Action="AI_DATA_SETTER_4" Condition="NOT Installed" Sequence="4001"/>
+    <ROW Action="AI_ResolveLogOnAsService" Condition="NOT Installed" Sequence="1001"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiInstallUISequenceComponent">
     <ROW Action="AI_RESTORE_LOCATION" Condition="APPDIR=&quot;&quot;" Sequence="749"/>
