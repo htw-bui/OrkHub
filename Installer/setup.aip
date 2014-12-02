@@ -504,7 +504,7 @@
     <ROW XmlElement="value_9" ParentElement="setting_9" Name="value" Order="0" Flags="14" Text="[GET_ROOTPW]"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.XmlFileComponent">
-    <ROW XmlFile="OpenResKitHub.exe.config" FileName="OpenRe~2.con|OpenResKitHub.exe.config" DirProperty="APPDIR" Component="AI_ExePath" RootElement="configuration_1" Flags="89" Version="1.0" Encoding="UTF-8" IndentUnits="2"/>
-    <ROW XmlFile="OpenResKitHubConsole.exe.config" FileName="OpenRe~3.con|OpenResKitHubConsole.exe.config" DirProperty="APPDIR" Component="AI_ExePath" RootElement="configuration_2" Flags="89" Version="1.0" Encoding="UTF-8" IndentUnits="2"/>
+    <ROW XmlFile="OpenResKitHub.exe.config" FileName="OpenRe~2.con|OpenResKitHub.exe.config" DirProperty="APPDIR" Component="AI_ExePath" RootElement="configuration_1" Flags="25" Version="1.0" Encoding="UTF-8" IndentUnits="2"/>
+    <ROW XmlFile="OpenResKitHubConsole.exe.config" FileName="OpenRe~3.con|OpenResKitHubConsole.exe.config" DirProperty="APPDIR" Component="AI_ExePath" RootElement="configuration_2" Flags="25" Version="1.0" Encoding="UTF-8" IndentUnits="2"/>
   </COMPONENT>
 </DOCUMENT>
