@@ -14,7 +14,6 @@
 
 #endregion
 
-using System.Collections.Generic;
 using System.ComponentModel.Composition;
 using System.Data.Entity;
 

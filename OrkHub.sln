@@ -18,6 +18,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenResKit.ODataHost", "Ope
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenResKitHubConsole", "OpenResKitHubConsole\OpenResKitHubConsole.csproj", "{CF375FC4-B24A-459A-A1A5-F4A2C145EAF6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenResKit.FacilityManagement", "OpenResKit.FacilityManagenent\OpenResKit.FacilityManagement.csproj", "{819E38AA-5870-4812-A70D-D50F3BA7C6D7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -44,6 +46,10 @@ Global
 		{CF375FC4-B24A-459A-A1A5-F4A2C145EAF6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CF375FC4-B24A-459A-A1A5-F4A2C145EAF6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CF375FC4-B24A-459A-A1A5-F4A2C145EAF6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{819E38AA-5870-4812-A70D-D50F3BA7C6D7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{819E38AA-5870-4812-A70D-D50F3BA7C6D7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{819E38AA-5870-4812-A70D-D50F3BA7C6D7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{819E38AA-5870-4812-A70D-D50F3BA7C6D7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
