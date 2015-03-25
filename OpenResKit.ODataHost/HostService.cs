@@ -70,6 +70,7 @@ namespace OpenResKit.ODataHost
                                                                                                        {
                                                                                                          new Uri(baseAdress + "OpenResKitHub")
                                                                                                        });
+
       var binding = new WebHttpBinding();
       binding.MaxReceivedMessageSize = int.MaxValue;
       binding.Security.Mode = WebHttpSecurityMode.TransportCredentialOnly;
