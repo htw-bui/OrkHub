@@ -20,7 +20,7 @@
     <ROW Property="GET_PORT" Value="7000" Options="1"/>
     <ROW Property="GET_ROOTPW" Value="ork123" Type="4"/>
     <ROW Property="GET_ROOTUSER" Value="root" Type="4"/>
-    <ROW Property="GET_URL" Value="localhost" Type="4"/>
+    <ROW Property="GET_SqlInstanceName" Value="SQLEXPRESS" Options="1"/>
     <ROW Property="GET_USER_NAME" Value="Ihr Name" Options="1"/>
     <ROW Property="GET_USER_PW" Value="123" Options="1"/>
     <ROW Property="Manufacturer" Value="HTW Berlin"/>
@@ -202,19 +202,19 @@
     <ROW Dialog_="UserPassDlg" Control="InstallingLabel" Type="Text" X="35" Y="138" Width="104" Height="24" Attributes="196611" Text="Installiere" TextStyle="Labels" Order="900"/>
     <ROW Dialog_="UserPassDlg" Control="FinalizingLabel" Type="Text" X="35" Y="162" Width="104" Height="26" Attributes="196611" Text="Installation wird abgeschlossen" TextStyle="Labels" Order="1000"/>
     <ROW Dialog_="UserPassDlg" Control="Name_Text" Type="Edit" X="235" Y="84" Width="257" Height="18" Attributes="3" Property="GET_USER_NAME" Text="{260}" Order="1100"/>
-    <ROW Dialog_="UserPassDlg" Control="Pass_Text" Type="Edit" X="235" Y="113" Width="257" Height="18" Attributes="2097155" Property="GET_USER_PW" Text="{260}" Order="1200"/>
-    <ROW Dialog_="UserPassDlg" Control="Name_Label" Type="Text" X="173" Y="89" Width="53" Height="11" Attributes="65603" Property="TEXT_1_PROP" Text="Benutzername" Order="1300"/>
-    <ROW Dialog_="UserPassDlg" Control="Pass_Label" Type="Text" X="188" Y="113" Width="38" Height="11" Attributes="65603" Property="TEXT_2_PROP" Text="Passwort" Order="1400"/>
+    <ROW Dialog_="UserPassDlg" Control="Pass_Text" Type="Edit" X="235" Y="109" Width="257" Height="18" Attributes="2097155" Property="GET_USER_PW" Text="{260}" Order="1200"/>
+    <ROW Dialog_="UserPassDlg" Control="Name_Label" Type="Text" X="173" Y="83" Width="53" Height="11" Attributes="65603" Property="TEXT_1_PROP" Text="Benutzername" Order="1300"/>
+    <ROW Dialog_="UserPassDlg" Control="Pass_Label" Type="Text" X="188" Y="109" Width="38" Height="11" Attributes="65603" Property="TEXT_2_PROP" Text="Passwort" Order="1400"/>
     <ROW Dialog_="UserPassDlg" Control="Text_1" Type="Text" X="178" Y="39" Width="314" Height="35" Attributes="65539" Property="TEXT_1_PROP_1" Text="Geben Sie das Windows-Benutzerkonto an, das Zugriff auf den MS SQL Server hat. Dieser muss außerdem das Recht besitzen Lokale Dienste zu starten." TextStyle="Labels" Order="1500"/>
-    <ROW Dialog_="UserPassDlg" Control="Edit_1" Type="Edit" X="235" Y="198" Width="257" Height="18" Attributes="3" Property="GET_PORT" Text="{260}" Order="1600"/>
-    <ROW Dialog_="UserPassDlg" Control="Text_2" Type="Text" X="173" Y="198" Width="53" Height="11" Attributes="65603" Property="TEXT_1_PROP_2" Text="Port" Order="1700"/>
-    <ROW Dialog_="UserPassDlg" Control="Text_3" Type="Text" X="178" Y="166" Width="314" Height="30" Attributes="65539" Property="TEXT_1_PROP_1_1" Text="Geben Sie die gewünschten Serverinformationen für den OpenResKit Hub an." TextStyle="Labels" Order="1800"/>
-    <ROW Dialog_="UserPassDlg" Control="Edit_2" Type="Edit" X="235" Y="222" Width="257" Height="18" Attributes="3" Property="GET_URL" Text="{260}" Order="1900"/>
-    <ROW Dialog_="UserPassDlg" Control="Text_4" Type="Text" X="173" Y="222" Width="53" Height="11" Attributes="65603" Property="TEXT_1_PROP_2_1" Text="Addresse" Order="2000"/>
-    <ROW Dialog_="UserPassDlg" Control="Edit_3" Type="Edit" X="235" Y="245" Width="257" Height="18" Attributes="3" Property="GET_ROOTUSER" Text="{260}" Order="2100"/>
-    <ROW Dialog_="UserPassDlg" Control="Text_5" Type="Text" X="173" Y="245" Width="53" Height="11" Attributes="65603" Property="TEXT_1_PROP_2_1_1" Text="Benutzername" Order="2200"/>
-    <ROW Dialog_="UserPassDlg" Control="Edit_4" Type="Edit" X="235" Y="270" Width="257" Height="18" Attributes="2097155" Property="GET_ROOTPW" Text="{260}" Order="2300"/>
-    <ROW Dialog_="UserPassDlg" Control="Text_6" Type="Text" X="188" Y="270" Width="38" Height="11" Attributes="65603" Property="TEXT_2_PROP_1" Text="Passwort" Order="2400"/>
+    <ROW Dialog_="UserPassDlg" Control="Edit_1" Type="Edit" X="235" Y="219" Width="257" Height="18" Attributes="3" Property="GET_PORT" Text="{260}" Order="1600"/>
+    <ROW Dialog_="UserPassDlg" Control="Text_2" Type="Text" X="173" Y="219" Width="53" Height="11" Attributes="65603" Property="TEXT_1_PROP_2" Text="Port" Order="1700"/>
+    <ROW Dialog_="UserPassDlg" Control="Text_3" Type="Text" X="178" Y="187" Width="314" Height="30" Attributes="65539" Property="TEXT_1_PROP_1_1" Text="Geben Sie die gewünschten Serverinformationen für den OpenResKit Hub an." TextStyle="Labels" Order="1800"/>
+    <ROW Dialog_="UserPassDlg" Control="Edit_3" Type="Edit" X="235" Y="245" Width="257" Height="18" Attributes="3" Property="GET_ROOTUSER" Text="{260}" Order="1900"/>
+    <ROW Dialog_="UserPassDlg" Control="Text_5" Type="Text" X="173" Y="243" Width="53" Height="11" Attributes="65603" Property="TEXT_1_PROP_2_1_1" Text="Benutzername" Order="2000"/>
+    <ROW Dialog_="UserPassDlg" Control="Edit_4" Type="Edit" X="235" Y="270" Width="257" Height="18" Attributes="2097155" Property="GET_ROOTPW" Text="{260}" Order="2100"/>
+    <ROW Dialog_="UserPassDlg" Control="Text_6" Type="Text" X="188" Y="268" Width="38" Height="11" Attributes="65603" Property="TEXT_2_PROP_1" Text="Passwort" Order="2200"/>
+    <ROW Dialog_="UserPassDlg" Control="Text_4" Type="Text" X="156" Y="134" Width="69" Height="11" Attributes="65603" Property="TEXT_2_PROP_2" Text="SQL Instanzname" Order="2300"/>
+    <ROW Dialog_="UserPassDlg" Control="Edit_2" Type="Edit" X="235" Y="134" Width="257" Height="18" Attributes="3" Property="GET_SqlInstanceName" Text="{260}" Order="2400"/>
     <ROW Dialog_="VerifyReadyDlg" Control="CollectingLabel" Type="Text" X="35" Y="90" Width="104" Height="24" Attributes="196611" Text="Informationen werden gesammelt" TextStyle="Labels" Order="700" TextLocId="Graphite.Control.Text.Dlg#CollectingLabel" MsiKey="VerifyReadyDlg#CollectingLabel"/>
     <ROW Dialog_="VerifyReadyDlg" Control="PreparingLabel" Type="Text" X="35" Y="114" Width="111" Height="18" Attributes="196611" Text="Installation wird vorbereitet" TextStyle="Labels" Order="800" TextLocId="Graphite.Control.Text.Dlg#PreparingLabel" MsiKey="VerifyReadyDlg#PreparingLabel"/>
     <ROW Dialog_="VerifyReadyDlg" Control="InstallingLabel" Type="Text" X="35" Y="138" Width="104" Height="24" Attributes="196611" Text="Installiere" TextStyle="Labels" Order="900" TextLocId="Graphite.Control.Text.Dlg#InstallingLabel" MsiKey="VerifyReadyDlg#InstallingLabel"/>
@@ -236,9 +236,9 @@
     <ROW Dialog_="UserPassDlg" Control_="Pass_Text" Action="Default" Condition="GET_USER_PW"/>
     <ROW Dialog_="UserPassDlg" Control_="Name_Text" Action="Default" Condition="GET_USER_NAME"/>
     <ROW Dialog_="UserPassDlg" Control_="Edit_1" Action="Default" Condition="GET_PORT"/>
-    <ROW Dialog_="UserPassDlg" Control_="Edit_2" Action="Default" Condition="GET_URL"/>
     <ROW Dialog_="UserPassDlg" Control_="Edit_3" Action="Default" Condition="GET_ROOTUSER"/>
     <ROW Dialog_="UserPassDlg" Control_="Edit_4" Action="Default" Condition="GET_ROOTPW"/>
+    <ROW Dialog_="UserPassDlg" Control_="Edit_2" Action="Default" Condition="GET_SqlInstanceName"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiControlEventComponent">
     <ROW Dialog_="WelcomeDlg" Control_="Next" Event="NewDialog" Argument="UserPassDlg" Condition="AI_INSTALL" Ordering="1"/>
@@ -422,89 +422,93 @@
     <ROW FileId="nsremove.cmd" Name="nsremove.cmd" Directory_="TempFolder" Property="AI_NSREMOVE.CMD" Options="0" Data="Installer\nsremove.cmd"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.XmlAttributeComponent">
-    <ROW XmlAttribute="name_10" XmlElement="setting_5" Name="name" Flags="14" Order="0" Value="RootPassword"/>
-    <ROW XmlAttribute="name_11" XmlElement="setting_6" Name="name" Flags="14" Order="0" Value="Url"/>
+    <ROW XmlAttribute="name" XmlElement="section" Name="name" Flags="14" Order="0" Value="entityFramework"/>
+    <ROW XmlAttribute="name_1" XmlElement="sectionGroup" Name="name" Flags="14" Order="0" Value="applicationSettings"/>
+    <ROW XmlAttribute="name_10" XmlElement="setting_5" Name="name" Flags="14" Order="0" Value="RootUser"/>
+    <ROW XmlAttribute="name_11" XmlElement="setting_6" Name="name" Flags="14" Order="0" Value="RootPassword"/>
     <ROW XmlAttribute="name_12" XmlElement="setting_7" Name="name" Flags="14" Order="0" Value="Port"/>
-    <ROW XmlAttribute="name_13" XmlElement="section_3" Name="name" Flags="14" Order="0" Value="entityFramework"/>
-    <ROW XmlAttribute="name_14" XmlElement="sectionGroup_2" Name="name" Flags="14" Order="0" Value="applicationSettings"/>
-    <ROW XmlAttribute="name_15" XmlElement="section_4" Name="name" Flags="14" Order="0" Value="OpenResKit.ODataHost.Properties.Settings"/>
-    <ROW XmlAttribute="name_16" XmlElement="setting_8" Name="name" Flags="14" Order="0" Value="RootUser"/>
-    <ROW XmlAttribute="name_17" XmlElement="setting_9" Name="name" Flags="14" Order="0" Value="RootPassword"/>
-    <ROW XmlAttribute="name_18" XmlElement="setting_10" Name="name" Flags="14" Order="0" Value="Url"/>
-    <ROW XmlAttribute="name_19" XmlElement="setting_11" Name="name" Flags="14" Order="0" Value="Port"/>
+    <ROW XmlAttribute="name_13" XmlElement="setting_3" Name="name" Flags="14" Order="0" Value="Port"/>
+    <ROW XmlAttribute="name_2" XmlElement="section_3" Name="name" Flags="14" Order="0" Value="OpenResKit.ODataHost.Properties.Settings"/>
+    <ROW XmlAttribute="name_3" XmlElement="setting" Name="name" Flags="14" Order="0" Value="RootUser"/>
+    <ROW XmlAttribute="name_4" XmlElement="setting_1" Name="name" Flags="14" Order="0" Value="RootPassword"/>
+    <ROW XmlAttribute="name_5" XmlElement="setting_2" Name="name" Flags="14" Order="0" Value="Url"/>
     <ROW XmlAttribute="name_6" XmlElement="section_1" Name="name" Flags="14" Order="0" Value="entityFramework"/>
-    <ROW XmlAttribute="name_7" XmlElement="sectionGroup_1" Name="name" Flags="14" Order="0" Value="applicationSettings"/>
-    <ROW XmlAttribute="name_8" XmlElement="section_2" Name="name" Flags="14" Order="0" Value="OpenResKit.ODataHost.Properties.Settings"/>
-    <ROW XmlAttribute="name_9" XmlElement="setting_4" Name="name" Flags="14" Order="0" Value="RootUser"/>
+    <ROW XmlAttribute="name_7" XmlElement="section_2" Name="name" Flags="14" Order="0" Value="OpenResKit.ODataHost.Properties.Settings"/>
+    <ROW XmlAttribute="name_8" XmlElement="sectionGroup_1" Name="name" Flags="14" Order="0" Value="applicationSettings"/>
+    <ROW XmlAttribute="name_9" XmlElement="setting_4" Name="name" Flags="14" Order="0" Value="Url"/>
+    <ROW XmlAttribute="requirePermission" XmlElement="section" Name="requirePermission" Flags="14" Order="2" Value="false"/>
     <ROW XmlAttribute="requirePermission_1" XmlElement="section_1" Name="requirePermission" Flags="14" Order="2" Value="false"/>
     <ROW XmlAttribute="requirePermission_2" XmlElement="section_2" Name="requirePermission" Flags="14" Order="2" Value="false"/>
     <ROW XmlAttribute="requirePermission_3" XmlElement="section_3" Name="requirePermission" Flags="14" Order="2" Value="false"/>
-    <ROW XmlAttribute="requirePermission_4" XmlElement="section_4" Name="requirePermission" Flags="14" Order="2" Value="false"/>
-    <ROW XmlAttribute="serializeAs_10" XmlElement="setting_10" Name="serializeAs" Flags="14" Order="1" Value="String"/>
-    <ROW XmlAttribute="serializeAs_11" XmlElement="setting_11" Name="serializeAs" Flags="14" Order="1" Value="String"/>
+    <ROW XmlAttribute="serializeAs" XmlElement="setting" Name="serializeAs" Flags="14" Order="1" Value="String"/>
+    <ROW XmlAttribute="serializeAs_1" XmlElement="setting_1" Name="serializeAs" Flags="14" Order="1" Value="String"/>
+    <ROW XmlAttribute="serializeAs_2" XmlElement="setting_2" Name="serializeAs" Flags="14" Order="1" Value="String"/>
+    <ROW XmlAttribute="serializeAs_3" XmlElement="setting_3" Name="serializeAs" Flags="14" Order="1" Value="String"/>
     <ROW XmlAttribute="serializeAs_4" XmlElement="setting_4" Name="serializeAs" Flags="14" Order="1" Value="String"/>
     <ROW XmlAttribute="serializeAs_5" XmlElement="setting_5" Name="serializeAs" Flags="14" Order="1" Value="String"/>
     <ROW XmlAttribute="serializeAs_6" XmlElement="setting_6" Name="serializeAs" Flags="14" Order="1" Value="String"/>
     <ROW XmlAttribute="serializeAs_7" XmlElement="setting_7" Name="serializeAs" Flags="14" Order="1" Value="String"/>
-    <ROW XmlAttribute="serializeAs_8" XmlElement="setting_8" Name="serializeAs" Flags="14" Order="1" Value="String"/>
-    <ROW XmlAttribute="serializeAs_9" XmlElement="setting_9" Name="serializeAs" Flags="14" Order="1" Value="String"/>
     <ROW XmlAttribute="sku" XmlElement="supportedRuntime" Name="sku" Flags="14" Order="1" Value=".NETFramework,Version=v4.5"/>
     <ROW XmlAttribute="sku_1" XmlElement="supportedRuntime_1" Name="sku" Flags="14" Order="1" Value=".NETFramework,Version=v4.5"/>
+    <ROW XmlAttribute="type" XmlElement="section" Name="type" Flags="14" Order="1" Value="System.Data.Entity.Internal.ConfigFile.EntityFrameworkSection, EntityFramework, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"/>
+    <ROW XmlAttribute="type_1" XmlElement="sectionGroup" Name="type" Flags="14" Order="1" Value="System.Configuration.ApplicationSettingsGroup, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"/>
     <ROW XmlAttribute="type_2" XmlElement="section_1" Name="type" Flags="14" Order="1" Value="System.Data.Entity.Internal.ConfigFile.EntityFrameworkSection, EntityFramework, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"/>
-    <ROW XmlAttribute="type_3" XmlElement="sectionGroup_1" Name="type" Flags="14" Order="1" Value="System.Configuration.ApplicationSettingsGroup, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"/>
-    <ROW XmlAttribute="type_4" XmlElement="section_2" Name="type" Flags="14" Order="1" Value="System.Configuration.ClientSettingsSection, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"/>
+    <ROW XmlAttribute="type_3" XmlElement="section_2" Name="type" Flags="14" Order="1" Value="System.Configuration.ClientSettingsSection, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"/>
+    <ROW XmlAttribute="type_4" XmlElement="sectionGroup_1" Name="type" Flags="14" Order="1" Value="System.Configuration.ApplicationSettingsGroup, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"/>
     <ROW XmlAttribute="type_5" XmlElement="defaultConnectionFactory" Name="type" Flags="14" Order="0" Value="System.Data.Entity.Infrastructure.SqlConnectionFactory, EntityFramework"/>
-    <ROW XmlAttribute="type_6" XmlElement="section_3" Name="type" Flags="14" Order="1" Value="System.Data.Entity.Internal.ConfigFile.EntityFrameworkSection, EntityFramework, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"/>
-    <ROW XmlAttribute="type_7" XmlElement="sectionGroup_2" Name="type" Flags="14" Order="1" Value="System.Configuration.ApplicationSettingsGroup, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"/>
-    <ROW XmlAttribute="type_8" XmlElement="section_4" Name="type" Flags="14" Order="1" Value="System.Configuration.ClientSettingsSection, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"/>
-    <ROW XmlAttribute="type_9" XmlElement="defaultConnectionFactory_1" Name="type" Flags="14" Order="0" Value="System.Data.Entity.Infrastructure.SqlConnectionFactory, EntityFramework"/>
+    <ROW XmlAttribute="type_6" XmlElement="section_3" Name="type" Flags="14" Order="1" Value="System.Configuration.ClientSettingsSection, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"/>
+    <ROW XmlAttribute="type_7" XmlElement="defaultConnectionFactory_1" Name="type" Flags="14" Order="0" Value="System.Data.Entity.Infrastructure.SqlConnectionFactory, EntityFramework"/>
+    <ROW XmlAttribute="value" XmlElement="parameter" Name="value" Flags="14" Order="0" Value="Data Source=.\[GET_SqlInstanceName]"/>
+    <ROW XmlAttribute="value_1" XmlElement="parameter_1" Name="value" Flags="14" Order="0" Value="Data Source=.\[GET_SqlInstanceName]"/>
     <ROW XmlAttribute="version" XmlElement="supportedRuntime" Name="version" Flags="14" Order="0" Value="v4.0"/>
     <ROW XmlAttribute="version_1" XmlElement="supportedRuntime_1" Name="version" Flags="14" Order="0" Value="v4.0"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.XmlElementComponent">
-    <ROW XmlElement="Comment" ParentElement="configSections_1" Name="Comment" Order="2" Flags="1" Text=" For more information on Entity Framework configuration, visit http://go.microsoft.com/fwlink/?LinkID=237468 "/>
-    <ROW XmlElement="Comment_1" ParentElement="configSections_2" Name="Comment" Order="2" Flags="1" Text=" For more information on Entity Framework configuration, visit http://go.microsoft.com/fwlink/?LinkID=237468 "/>
+    <ROW XmlElement="OpenResKit.ODataHost.Properties.Settings" ParentElement="applicationSettings" Name="OpenResKit.ODataHost.Properties.Settings" Order="0" Flags="14"/>
     <ROW XmlElement="OpenResKit.ODataHost.Properties.Settings_1" ParentElement="applicationSettings_1" Name="OpenResKit.ODataHost.Properties.Settings" Order="0" Flags="14"/>
-    <ROW XmlElement="OpenResKit.ODataHost.Properties.Settings_2" ParentElement="applicationSettings_2" Name="OpenResKit.ODataHost.Properties.Settings" Order="0" Flags="14"/>
+    <ROW XmlElement="applicationSettings" ParentElement="configuration" Name="applicationSettings" Order="3" Flags="14"/>
     <ROW XmlElement="applicationSettings_1" ParentElement="configuration_1" Name="applicationSettings" Order="3" Flags="14"/>
-    <ROW XmlElement="applicationSettings_2" ParentElement="configuration_2" Name="applicationSettings" Order="3" Flags="14"/>
+    <ROW XmlElement="configSections" ParentElement="configuration" Name="configSections" Order="0" Flags="14"/>
     <ROW XmlElement="configSections_1" ParentElement="configuration_1" Name="configSections" Order="0" Flags="14"/>
-    <ROW XmlElement="configSections_2" ParentElement="configuration_2" Name="configSections" Order="0" Flags="14"/>
+    <ROW XmlElement="configuration" Name="configuration" Order="0" Flags="30"/>
     <ROW XmlElement="configuration_1" Name="configuration" Order="0" Flags="30"/>
-    <ROW XmlElement="configuration_2" Name="configuration" Order="0" Flags="30"/>
     <ROW XmlElement="defaultConnectionFactory" ParentElement="entityFramework" Name="defaultConnectionFactory" Order="0" Flags="14"/>
     <ROW XmlElement="defaultConnectionFactory_1" ParentElement="entityFramework_1" Name="defaultConnectionFactory" Order="0" Flags="14"/>
     <ROW XmlElement="entityFramework" ParentElement="configuration_1" Name="entityFramework" Order="1" Flags="14"/>
-    <ROW XmlElement="entityFramework_1" ParentElement="configuration_2" Name="entityFramework" Order="1" Flags="14"/>
+    <ROW XmlElement="entityFramework_1" ParentElement="configuration" Name="entityFramework" Order="1" Flags="14"/>
+    <ROW XmlElement="parameter" ParentElement="parameters" Name="parameter" Order="0" Flags="14"/>
+    <ROW XmlElement="parameter_1" ParentElement="parameters_1" Name="parameter" Order="0" Flags="14"/>
+    <ROW XmlElement="parameters" ParentElement="defaultConnectionFactory_1" Name="parameters" Order="0" Flags="14"/>
+    <ROW XmlElement="parameters_1" ParentElement="defaultConnectionFactory" Name="parameters" Order="0" Flags="14"/>
+    <ROW XmlElement="section" ParentElement="configSections" Name="section" Order="0" Flags="14"/>
+    <ROW XmlElement="sectionGroup" ParentElement="configSections" Name="sectionGroup" Order="1" Flags="14"/>
     <ROW XmlElement="sectionGroup_1" ParentElement="configSections_1" Name="sectionGroup" Order="1" Flags="14"/>
-    <ROW XmlElement="sectionGroup_2" ParentElement="configSections_2" Name="sectionGroup" Order="1" Flags="14"/>
     <ROW XmlElement="section_1" ParentElement="configSections_1" Name="section" Order="0" Flags="14"/>
     <ROW XmlElement="section_2" ParentElement="sectionGroup_1" Name="section" Order="0" Flags="14"/>
-    <ROW XmlElement="section_3" ParentElement="configSections_2" Name="section" Order="0" Flags="14"/>
-    <ROW XmlElement="section_4" ParentElement="sectionGroup_2" Name="section" Order="0" Flags="14"/>
-    <ROW XmlElement="setting_10" ParentElement="OpenResKit.ODataHost.Properties.Settings_2" Name="setting" Order="2" Flags="14"/>
-    <ROW XmlElement="setting_11" ParentElement="OpenResKit.ODataHost.Properties.Settings_2" Name="setting" Order="3" Flags="14"/>
-    <ROW XmlElement="setting_4" ParentElement="OpenResKit.ODataHost.Properties.Settings_1" Name="setting" Order="0" Flags="14"/>
-    <ROW XmlElement="setting_5" ParentElement="OpenResKit.ODataHost.Properties.Settings_1" Name="setting" Order="1" Flags="14"/>
-    <ROW XmlElement="setting_6" ParentElement="OpenResKit.ODataHost.Properties.Settings_1" Name="setting" Order="2" Flags="14"/>
+    <ROW XmlElement="section_3" ParentElement="sectionGroup" Name="section" Order="0" Flags="14"/>
+    <ROW XmlElement="setting" ParentElement="OpenResKit.ODataHost.Properties.Settings" Name="setting" Order="0" Flags="14"/>
+    <ROW XmlElement="setting_1" ParentElement="OpenResKit.ODataHost.Properties.Settings" Name="setting" Order="1" Flags="14"/>
+    <ROW XmlElement="setting_2" ParentElement="OpenResKit.ODataHost.Properties.Settings" Name="setting" Order="2" Flags="14"/>
+    <ROW XmlElement="setting_3" ParentElement="OpenResKit.ODataHost.Properties.Settings" Name="setting" Order="3" Flags="14"/>
+    <ROW XmlElement="setting_4" ParentElement="OpenResKit.ODataHost.Properties.Settings_1" Name="setting" Order="2" Flags="14"/>
+    <ROW XmlElement="setting_5" ParentElement="OpenResKit.ODataHost.Properties.Settings_1" Name="setting" Order="0" Flags="14"/>
+    <ROW XmlElement="setting_6" ParentElement="OpenResKit.ODataHost.Properties.Settings_1" Name="setting" Order="1" Flags="14"/>
     <ROW XmlElement="setting_7" ParentElement="OpenResKit.ODataHost.Properties.Settings_1" Name="setting" Order="3" Flags="14"/>
-    <ROW XmlElement="setting_8" ParentElement="OpenResKit.ODataHost.Properties.Settings_2" Name="setting" Order="0" Flags="14"/>
-    <ROW XmlElement="setting_9" ParentElement="OpenResKit.ODataHost.Properties.Settings_2" Name="setting" Order="1" Flags="14"/>
     <ROW XmlElement="startup" ParentElement="configuration_1" Name="startup" Order="2" Flags="14"/>
-    <ROW XmlElement="startup_1" ParentElement="configuration_2" Name="startup" Order="2" Flags="14"/>
+    <ROW XmlElement="startup_1" ParentElement="configuration" Name="startup" Order="2" Flags="14"/>
     <ROW XmlElement="supportedRuntime" ParentElement="startup" Name="supportedRuntime" Order="0" Flags="14"/>
     <ROW XmlElement="supportedRuntime_1" ParentElement="startup_1" Name="supportedRuntime" Order="0" Flags="14"/>
-    <ROW XmlElement="value_10" ParentElement="setting_10" Name="value" Order="0" Flags="14" Text="[GET_URL]"/>
-    <ROW XmlElement="value_11" ParentElement="setting_11" Name="value" Order="0" Flags="14" Text="[GET_PORT]"/>
-    <ROW XmlElement="value_4" ParentElement="setting_4" Name="value" Order="0" Flags="14" Text="[GET_ROOTUSER]"/>
-    <ROW XmlElement="value_5" ParentElement="setting_5" Name="value" Order="0" Flags="14" Text="[GET_ROOTPW]"/>
-    <ROW XmlElement="value_6" ParentElement="setting_6" Name="value" Order="0" Flags="14" Text="[GET_URL]"/>
+    <ROW XmlElement="value" ParentElement="setting" Name="value" Order="0" Flags="14" Text="[GET_ROOTUSER]"/>
+    <ROW XmlElement="value_1" ParentElement="setting_1" Name="value" Order="0" Flags="14" Text="[GET_ROOTPW]"/>
+    <ROW XmlElement="value_2" ParentElement="setting_2" Name="value" Order="0" Flags="14" Text="localhost"/>
+    <ROW XmlElement="value_3" ParentElement="setting_3" Name="value" Order="0" Flags="14" Text="[GET_PORT]"/>
+    <ROW XmlElement="value_4" ParentElement="setting_4" Name="value" Order="0" Flags="14" Text="localhost"/>
+    <ROW XmlElement="value_5" ParentElement="setting_5" Name="value" Order="0" Flags="14" Text="[GET_ROOTUSER]"/>
+    <ROW XmlElement="value_6" ParentElement="setting_6" Name="value" Order="0" Flags="14" Text="[GET_ROOTPW]"/>
     <ROW XmlElement="value_7" ParentElement="setting_7" Name="value" Order="0" Flags="14" Text="[GET_PORT]"/>
-    <ROW XmlElement="value_8" ParentElement="setting_8" Name="value" Order="0" Flags="14" Text="[GET_ROOTUSER]"/>
-    <ROW XmlElement="value_9" ParentElement="setting_9" Name="value" Order="0" Flags="14" Text="[GET_ROOTPW]"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.XmlFileComponent">
-    <ROW XmlFile="OpenResKitHub.exe.config" FileName="OpenRe~2.con|OpenResKitHub.exe.config" DirProperty="APPDIR" Component="AI_ExePath" RootElement="configuration_1" Flags="25" Version="1.0" Encoding="UTF-8" IndentUnits="2"/>
-    <ROW XmlFile="OpenResKitHubConsole.exe.config" FileName="OpenRe~3.con|OpenResKitHubConsole.exe.config" DirProperty="APPDIR" Component="AI_ExePath" RootElement="configuration_2" Flags="25" Version="1.0" Encoding="UTF-8" IndentUnits="2"/>
+    <ROW XmlFile="OpenResKitHubConsole.exe.config" FileName="OpenRe~1.con|OpenResKitHubConsole.exe.config" DirProperty="APPDIR" Component="AI_ExePath" RootElement="configuration" Flags="89" Version="1.0" Encoding="UTF-8" IndentUnits="2"/>
+    <ROW XmlFile="OpenResKitHubConsole.exe1.config" FileName="OpenRe~3.con|OpenResKitHub.exe.config" DirProperty="APPDIR" Component="AI_ExePath" RootElement="configuration_1" Flags="89" Version="1.0" Encoding="UTF-8" IndentUnits="2"/>
   </COMPONENT>
 </DOCUMENT>
